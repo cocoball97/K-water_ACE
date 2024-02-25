@@ -1,0 +1,15 @@
+[2023-10-20T15:39:09.744+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: combined_dag.insert_to_db scheduled__2023-10-20T15:38:00+00:00 [queued]>
+[2023-10-20T15:39:09.751+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: combined_dag.insert_to_db scheduled__2023-10-20T15:38:00+00:00 [queued]>
+[2023-10-20T15:39:09.751+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-10-20T15:39:09.761+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): insert_to_db> on 2023-10-20 15:38:00+00:00
+[2023-10-20T15:39:09.769+0000] {standard_task_runner.py:57} INFO - Started process 2199 to run task
+[2023-10-20T15:39:09.772+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'combined_dag', 'insert_to_db', 'scheduled__2023-10-20T15:38:00+00:00', '--job-id', '362', '--raw', '--subdir', 'DAGS_FOLDER/combined_dag(real).py', '--cfg-path', '/tmp/tmp1tz4hcwb']
+[2023-10-20T15:39:09.772+0000] {standard_task_runner.py:85} INFO - Job 362: Subtask insert_to_db
+[2023-10-20T15:39:09.802+0000] {task_command.py:410} INFO - Running <TaskInstance: combined_dag.insert_to_db scheduled__2023-10-20T15:38:00+00:00 [running]> on host 310b365e0fea
+[2023-10-20T15:39:09.858+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='combined_dag' AIRFLOW_CTX_TASK_ID='insert_to_db' AIRFLOW_CTX_EXECUTION_DATE='2023-10-20T15:38:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-20T15:38:00+00:00'
+[2023-10-20T15:39:09.880+0000] {logging_mixin.py:150} INFO - [[10.33272, 6.664770000000001, 17.19387, 245.25063, 23.17428, 3420.2335500000004]]
+[2023-10-20T15:39:09.880+0000] {combined_dag(real).py:86} INFO - [[10.33272, 6.664770000000001, 17.19387, 245.25063, 23.17428, 3420.2335500000004]]
+[2023-10-20T15:39:09.890+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-10-20T15:39:09.896+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=combined_dag, task_id=insert_to_db, execution_date=20231020T153800, start_date=20231020T153909, end_date=20231020T153909
+[2023-10-20T15:39:09.944+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-10-20T15:39:09.959+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,98 @@
+[2023-12-20T05:52:19.440+0000] {processor.py:157} INFO - Started process (PID=95) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:52:19.441+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:52:19.441+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.441+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:52:21.315+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:52:21.428+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:21.428+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:combined_dag
+[2023-12-20T05:52:21.443+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:21.443+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:combined_dag
+[2023-12-20T05:52:21.451+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:21.451+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:combined_dag
+[2023-12-20T05:52:21.463+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:21.462+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:52:21.472+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:21.472+0000] {dag.py:2763} INFO - Creating ORM DAG for combined_dag
+[2023-12-20T05:52:21.480+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:21.480+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:51:00+00:00, run_after=2023-12-20T05:52:00+00:00
+[2023-12-20T05:52:21.492+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 2.055 seconds
+[2023-12-20T05:52:51.631+0000] {processor.py:157} INFO - Started process (PID=209) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:52:51.633+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:52:51.634+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:51.634+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:52:53.157+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:52:53.178+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:53.178+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:52:53.200+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:53.200+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:51:00+00:00, run_after=2023-12-20T05:52:00+00:00
+[2023-12-20T05:52:53.221+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.592 seconds
+[2023-12-20T05:53:23.570+0000] {processor.py:157} INFO - Started process (PID=322) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:53:23.571+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:53:23.571+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:23.571+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:53:25.048+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:53:25.063+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:25.063+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:53:25.079+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:25.079+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:52:00+00:00, run_after=2023-12-20T05:53:00+00:00
+[2023-12-20T05:53:25.096+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.528 seconds
+[2023-12-20T05:53:55.249+0000] {processor.py:157} INFO - Started process (PID=435) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:53:55.250+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:53:55.251+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:55.250+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:53:56.834+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:53:56.851+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:56.851+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:53:56.867+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:56.867+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:52:00+00:00, run_after=2023-12-20T05:53:00+00:00
+[2023-12-20T05:53:56.881+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.634 seconds
+[2023-12-20T05:54:27.207+0000] {processor.py:157} INFO - Started process (PID=549) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:54:27.209+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:54:27.209+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:27.209+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:54:28.792+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:54:28.807+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:28.807+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:54:28.821+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:28.821+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:53:00+00:00, run_after=2023-12-20T05:54:00+00:00
+[2023-12-20T05:54:28.834+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.630 seconds
+[2023-12-20T05:54:59.134+0000] {processor.py:157} INFO - Started process (PID=653) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:54:59.136+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:54:59.136+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:59.136+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:55:00.665+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:55:00.681+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:00.681+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:55:00.696+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:00.696+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:54:00+00:00, run_after=2023-12-20T05:55:00+00:00
+[2023-12-20T05:55:00.707+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.575 seconds
+[2023-12-20T05:55:31.251+0000] {processor.py:157} INFO - Started process (PID=767) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:55:31.253+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:55:31.253+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:31.253+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:55:32.829+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:55:32.845+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:32.845+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:55:32.860+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:32.860+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:54:00+00:00, run_after=2023-12-20T05:55:00+00:00
+[2023-12-20T05:55:32.873+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.625 seconds
+[2023-12-20T05:56:05.522+0000] {processor.py:157} INFO - Started process (PID=905) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:56:05.523+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:56:05.523+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:05.523+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:56:07.248+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:56:07.264+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:07.263+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:56:07.277+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:07.277+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:55:00+00:00, run_after=2023-12-20T05:56:00+00:00
+[2023-12-20T05:56:07.289+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.770 seconds
+[2023-12-20T05:56:37.459+0000] {processor.py:157} INFO - Started process (PID=1017) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:56:37.459+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:56:37.460+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:37.460+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:56:38.998+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:56:39.016+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:39.015+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:56:39.031+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:39.031+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:55:00+00:00, run_after=2023-12-20T05:56:00+00:00
+[2023-12-20T05:56:39.043+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.589 seconds
+[2023-12-20T05:57:09.261+0000] {processor.py:157} INFO - Started process (PID=1109) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:57:09.263+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:57:09.263+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:09.263+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:57:10.927+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:57:10.950+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:10.949+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:57:10.969+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:10.969+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:56:00+00:00, run_after=2023-12-20T05:57:00+00:00
+[2023-12-20T05:57:10.984+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.725 seconds
+[2023-12-20T05:57:41.028+0000] {processor.py:157} INFO - Started process (PID=1192) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:57:41.030+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:57:41.031+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:41.031+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:57:42.747+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:57:42.766+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:42.765+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:57:42.784+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:42.784+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:56:00+00:00, run_after=2023-12-20T05:57:00+00:00
+[2023-12-20T05:57:42.799+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.773 seconds
+[2023-12-20T05:58:51.273+0000] {processor.py:157} INFO - Started process (PID=76) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:58:51.274+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:58:51.275+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:58:51.274+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:58:53.194+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:58:53.271+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:58:53.271+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:58:53.287+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:58:53.287+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:57:00+00:00, run_after=2023-12-20T05:58:00+00:00
+[2023-12-20T05:58:53.300+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 2.030 seconds
+[2023-12-20T05:59:23.708+0000] {processor.py:157} INFO - Started process (PID=170) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:59:23.710+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:59:23.711+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:23.710+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:59:25.337+0000] {processor.py:836} INFO - DAG(s) dict_keys(['combined_dag']) retrieved from /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:59:25.355+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:25.355+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:59:25.371+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:25.371+0000] {dag.py:3508} INFO - Setting next_dagrun for combined_dag to 2023-12-20T05:58:00+00:00, run_after=2023-12-20T05:59:00+00:00
+[2023-12-20T05:59:25.384+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(real).py took 1.680 seconds
+[2023-12-20T05:59:55.733+0000] {processor.py:157} INFO - Started process (PID=264) to work on /opt/airflow/dags/combined_dag(real).py
+[2023-12-20T05:59:55.735+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(real).py for tasks to queue
+[2023-12-20T05:59:55.735+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:55.735+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(real).py

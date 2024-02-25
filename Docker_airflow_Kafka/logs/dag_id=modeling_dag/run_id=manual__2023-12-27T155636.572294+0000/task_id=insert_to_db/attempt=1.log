@@ -1,0 +1,30 @@
+[2023-12-27T15:56:47.491+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: modeling_dag.insert_to_db manual__2023-12-27T15:56:36.572294+00:00 [queued]>
+[2023-12-27T15:56:47.499+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: modeling_dag.insert_to_db manual__2023-12-27T15:56:36.572294+00:00 [queued]>
+[2023-12-27T15:56:47.499+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-27T15:56:47.512+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): insert_to_db> on 2023-12-27 15:56:36.572294+00:00
+[2023-12-27T15:56:47.519+0000] {standard_task_runner.py:57} INFO - Started process 407 to run task
+[2023-12-27T15:56:47.522+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'modeling_dag', 'insert_to_db', 'manual__2023-12-27T15:56:36.572294+00:00', '--job-id', '389', '--raw', '--subdir', 'DAGS_FOLDER/modeling.py', '--cfg-path', '/tmp/tmplp7p1i8x']
+[2023-12-27T15:56:47.524+0000] {standard_task_runner.py:85} INFO - Job 389: Subtask insert_to_db
+[2023-12-27T15:56:47.558+0000] {task_command.py:410} INFO - Running <TaskInstance: modeling_dag.insert_to_db manual__2023-12-27T15:56:36.572294+00:00 [running]> on host c56b1de7f6cf
+[2023-12-27T15:56:47.613+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='modeling_dag' AIRFLOW_CTX_TASK_ID='insert_to_db' AIRFLOW_CTX_EXECUTION_DATE='2023-12-27T15:56:36.572294+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-27T15:56:36.572294+00:00'
+[2023-12-27T15:56:47.635+0000] {logging_mixin.py:150} INFO - [[9.83907, 7.789680000000001, 16.20846, 318.31407, 53.10252, 3476.8125]]
+[2023-12-27T15:56:47.635+0000] {modeling.py:86} INFO - [[9.83907, 7.789680000000001, 16.20846, 318.31407, 53.10252, 3476.8125]]
+[2023-12-27T15:57:08.678+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/modeling.py", line 92, in insert_to_db
+    password="airflow"
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "192.168.35.133", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2023-12-27T15:57:08.685+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=modeling_dag, task_id=insert_to_db, execution_date=20231227T155636, start_date=20231227T155647, end_date=20231227T155708
+[2023-12-27T15:57:08.702+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 389 for task insert_to_db (connection to server at "192.168.35.133", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+; 407)
+[2023-12-27T15:57:08.734+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-12-27T15:57:08.750+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

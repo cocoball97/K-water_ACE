@@ -1,0 +1,12 @@
+[2023-12-27T07:26:17.162+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: producer_dag.produce_task manual__2023-12-27T07:26:13.171962+00:00 [queued]>
+[2023-12-27T07:26:17.171+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: producer_dag.produce_task manual__2023-12-27T07:26:13.171962+00:00 [queued]>
+[2023-12-27T07:26:17.171+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-27T07:26:17.186+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): produce_task> on 2023-12-27 07:26:13.171962+00:00
+[2023-12-27T07:26:17.191+0000] {standard_task_runner.py:57} INFO - Started process 613 to run task
+[2023-12-27T07:26:17.194+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'producer_dag', 'produce_task', 'manual__2023-12-27T07:26:13.171962+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/producer.py', '--cfg-path', '/tmp/tmp0rx7gf1s']
+[2023-12-27T07:26:17.196+0000] {standard_task_runner.py:85} INFO - Job 189: Subtask produce_task
+[2023-12-27T07:26:17.240+0000] {task_command.py:410} INFO - Running <TaskInstance: producer_dag.produce_task manual__2023-12-27T07:26:13.171962+00:00 [running]> on host c56b1de7f6cf
+[2023-12-27T07:26:17.333+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='producer_dag' AIRFLOW_CTX_TASK_ID='produce_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-27T07:26:13.171962+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-27T07:26:13.171962+00:00'
+[2023-12-27T07:30:42.532+0000] {taskinstance.py:1097} INFO - Dependencies not met for <TaskInstance: producer_dag.produce_task manual__2023-12-27T07:26:13.171962+00:00 [running]>, dependency 'Task Instance Not Running' FAILED: Task is in the running state
+[2023-12-27T07:30:42.538+0000] {taskinstance.py:1097} INFO - Dependencies not met for <TaskInstance: producer_dag.produce_task manual__2023-12-27T07:26:13.171962+00:00 [running]>, dependency 'Task Instance State' FAILED: Task is in the 'running' state.
+[2023-12-27T07:30:42.540+0000] {local_task_job_runner.py:154} INFO - Task is not able to be run

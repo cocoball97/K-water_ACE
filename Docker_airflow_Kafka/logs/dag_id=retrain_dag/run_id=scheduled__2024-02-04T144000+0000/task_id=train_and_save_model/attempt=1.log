@@ -1,0 +1,21 @@
+[2024-02-04T14:42:01.625+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retrain_dag.train_and_save_model scheduled__2024-02-04T14:40:00+00:00 [queued]>
+[2024-02-04T14:42:01.632+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retrain_dag.train_and_save_model scheduled__2024-02-04T14:40:00+00:00 [queued]>
+[2024-02-04T14:42:01.632+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2024-02-04T14:42:01.642+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): train_and_save_model> on 2024-02-04 14:40:00+00:00
+[2024-02-04T14:42:01.647+0000] {standard_task_runner.py:57} INFO - Started process 545 to run task
+[2024-02-04T14:42:01.650+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'retrain_dag', 'train_and_save_model', 'scheduled__2024-02-04T14:40:00+00:00', '--job-id', '711', '--raw', '--subdir', 'DAGS_FOLDER/retrain_dag.py', '--cfg-path', '/tmp/tmpcg0l605g']
+[2024-02-04T14:42:01.651+0000] {standard_task_runner.py:85} INFO - Job 711: Subtask train_and_save_model
+[2024-02-04T14:42:01.689+0000] {task_command.py:410} INFO - Running <TaskInstance: retrain_dag.train_and_save_model scheduled__2024-02-04T14:40:00+00:00 [running]> on host 93456042b127
+[2024-02-04T14:42:01.757+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retrain_dag' AIRFLOW_CTX_TASK_ID='train_and_save_model' AIRFLOW_CTX_EXECUTION_DATE='2024-02-04T14:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-04T14:40:00+00:00'
+[2024-02-04T14:42:16.375+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/retrain_dag.py", line 76, in train_and_save_model
+    cursor.execute(update_query, (current_time,))
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+

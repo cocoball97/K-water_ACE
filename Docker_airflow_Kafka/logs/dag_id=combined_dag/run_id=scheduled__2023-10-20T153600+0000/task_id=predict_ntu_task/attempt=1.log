@@ -1,0 +1,23 @@
+[2023-10-20T15:37:05.637+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: combined_dag.predict_ntu_task scheduled__2023-10-20T15:36:00+00:00 [queued]>
+[2023-10-20T15:37:05.643+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: combined_dag.predict_ntu_task scheduled__2023-10-20T15:36:00+00:00 [queued]>
+[2023-10-20T15:37:05.643+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-10-20T15:37:05.654+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): predict_ntu_task> on 2023-10-20 15:36:00+00:00
+[2023-10-20T15:37:05.662+0000] {standard_task_runner.py:57} INFO - Started process 1794 to run task
+[2023-10-20T15:37:05.665+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'combined_dag', 'predict_ntu_task', 'scheduled__2023-10-20T15:36:00+00:00', '--job-id', '349', '--raw', '--subdir', 'DAGS_FOLDER/combined_dag(real).py', '--cfg-path', '/tmp/tmpankrdjg9']
+[2023-10-20T15:37:05.666+0000] {standard_task_runner.py:85} INFO - Job 349: Subtask predict_ntu_task
+[2023-10-20T15:37:05.698+0000] {task_command.py:410} INFO - Running <TaskInstance: combined_dag.predict_ntu_task scheduled__2023-10-20T15:36:00+00:00 [running]> on host 310b365e0fea
+[2023-10-20T15:37:05.761+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='combined_dag' AIRFLOW_CTX_TASK_ID='predict_ntu_task' AIRFLOW_CTX_EXECUTION_DATE='2023-10-20T15:36:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-20T15:36:00+00:00'
+[2023-10-20T15:37:05.771+0000] {logging_mixin.py:150} INFO - [[9.066717], [8.55874], [7.954365999999999]]
+[2023-10-20T15:37:05.771+0000] {combined_dag(real).py:58} INFO - [[9.066717], [8.55874], [7.954365999999999]]
+[2023-10-20T15:37:06.314+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/base.py:451: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  "X does not have valid feature names, but"
+
+[2023-10-20T15:37:07.008+0000] {logging_mixin.py:150} INFO - 1/1 [==============================] - ETA: 0s
+[2023-10-20T15:37:07.008+0000] {logging_mixin.py:150} INFO - 1/1 [==============================] - 1s 659ms/step
+[2023-10-20T15:37:07.010+0000] {logging_mixin.py:150} INFO - new data : [[9.066717], [8.55874], [7.954365999999999]]
+[2023-10-20T15:37:07.011+0000] {logging_mixin.py:150} INFO - t+1 ntu : [6.553798]
+[2023-10-20T15:37:07.011+0000] {logging_mixin.py:150} INFO - <class 'numpy.ndarray'>
+[2023-10-20T15:37:07.011+0000] {python.py:183} INFO - Done. Returned value was: [6.553798]
+[2023-10-20T15:37:07.029+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=combined_dag, task_id=predict_ntu_task, execution_date=20231020T153600, start_date=20231020T153705, end_date=20231020T153707
+[2023-10-20T15:37:07.086+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-10-20T15:37:07.109+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

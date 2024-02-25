@@ -1,0 +1,26 @@
+[2023-12-27T17:42:01.730+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retrain_dag.train_and_save_model scheduled__2023-12-27T17:40:00+00:00 [queued]>
+[2023-12-27T17:42:01.739+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retrain_dag.train_and_save_model scheduled__2023-12-27T17:40:00+00:00 [queued]>
+[2023-12-27T17:42:01.739+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-27T17:42:01.754+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): train_and_save_model> on 2023-12-27 17:40:00+00:00
+[2023-12-27T17:42:01.761+0000] {standard_task_runner.py:57} INFO - Started process 2324 to run task
+[2023-12-27T17:42:01.765+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'retrain_dag', 'train_and_save_model', 'scheduled__2023-12-27T17:40:00+00:00', '--job-id', '606', '--raw', '--subdir', 'DAGS_FOLDER/retrain_dag.py', '--cfg-path', '/tmp/tmpx3rgc_9l']
+[2023-12-27T17:42:01.766+0000] {standard_task_runner.py:85} INFO - Job 606: Subtask train_and_save_model
+[2023-12-27T17:42:01.813+0000] {task_command.py:410} INFO - Running <TaskInstance: retrain_dag.train_and_save_model scheduled__2023-12-27T17:40:00+00:00 [running]> on host c56b1de7f6cf
+[2023-12-27T17:42:01.883+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retrain_dag' AIRFLOW_CTX_TASK_ID='train_and_save_model' AIRFLOW_CTX_EXECUTION_DATE='2023-12-27T17:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-27T17:40:00+00:00'
+[2023-12-27T17:42:06.412+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/retrain_dag.py", line 48, in train_and_save_model
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=6666)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/model_selection/_split.py", line 2421, in train_test_split
+    n_samples, test_size, train_size, default_test_size=0.25
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/model_selection/_split.py", line 2101, in _validate_shuffle_split
+    "aforementioned parameters.".format(n_samples, test_size, train_size)
+ValueError: With n_samples=0, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+[2023-12-27T17:42:06.418+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=retrain_dag, task_id=train_and_save_model, execution_date=20231227T174000, start_date=20231227T174201, end_date=20231227T174206
+[2023-12-27T17:42:06.431+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 606 for task train_and_save_model (With n_samples=0, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.; 2324)
+[2023-12-27T17:42:06.474+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-12-27T17:42:06.488+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,301 @@
+[2023-12-25T13:22:57.911+0000] {processor.py:157} INFO - Started process (PID=29792) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:22:57.911+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:22:57.912+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:22:57.911+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:22:57.930+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:22:58.079+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:22:58.079+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:22:58.095+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:22:58.095+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:22:00+00:00, run_after=2023-12-25T13:23:00+00:00
+[2023-12-25T13:22:58.110+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.201 seconds
+[2023-12-25T13:23:28.844+0000] {processor.py:157} INFO - Started process (PID=29909) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:23:28.845+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:23:28.846+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:23:28.846+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:23:28.881+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:23:28.920+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:23:28.919+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:23:28.956+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:23:28.956+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:23:00+00:00, run_after=2023-12-25T13:24:00+00:00
+[2023-12-25T13:23:28.978+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.136 seconds
+[2023-12-25T13:23:59.461+0000] {processor.py:157} INFO - Started process (PID=30012) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:23:59.463+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:23:59.463+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:23:59.463+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:23:59.474+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:23:59.484+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:23:59.484+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:23:59.502+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:23:59.502+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:23:00+00:00, run_after=2023-12-25T13:24:00+00:00
+[2023-12-25T13:23:59.516+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.056 seconds
+[2023-12-25T13:24:29.938+0000] {processor.py:157} INFO - Started process (PID=30146) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:24:29.940+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:24:29.941+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:24:29.940+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:24:29.951+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:24:30.031+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:24:30.031+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:24:30.047+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:24:30.046+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:23:00+00:00, run_after=2023-12-25T13:24:00+00:00
+[2023-12-25T13:24:30.135+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.199 seconds
+[2023-12-25T13:25:00.519+0000] {processor.py:157} INFO - Started process (PID=30258) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:25:00.520+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:25:00.521+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:25:00.521+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:25:00.533+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:25:00.552+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:25:00.552+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:25:00.579+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:25:00.579+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:24:00+00:00, run_after=2023-12-25T13:25:00+00:00
+[2023-12-25T13:25:00.594+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.078 seconds
+[2023-12-25T13:25:31.100+0000] {processor.py:157} INFO - Started process (PID=30364) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:25:31.102+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:25:31.102+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:25:31.102+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:25:31.113+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:25:31.123+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:25:31.122+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:25:31.142+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:25:31.142+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:24:00+00:00, run_after=2023-12-25T13:25:00+00:00
+[2023-12-25T13:25:31.155+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.058 seconds
+[2023-12-25T13:26:01.325+0000] {processor.py:157} INFO - Started process (PID=30476) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:26:01.327+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:26:01.327+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:26:01.327+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:26:01.339+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:26:01.433+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:26:01.433+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:26:01.528+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:26:01.528+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:25:00+00:00, run_after=2023-12-25T13:26:00+00:00
+[2023-12-25T13:26:01.545+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.222 seconds
+[2023-12-25T13:26:32.120+0000] {processor.py:157} INFO - Started process (PID=30579) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:26:32.122+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:26:32.123+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:26:32.122+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:26:32.133+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:26:32.154+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:26:32.153+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:26:32.172+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:26:32.171+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:25:00+00:00, run_after=2023-12-25T13:26:00+00:00
+[2023-12-25T13:26:32.184+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.066 seconds
+[2023-12-25T13:27:02.924+0000] {processor.py:157} INFO - Started process (PID=30692) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:27:02.925+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:27:02.926+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:27:02.925+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:27:02.936+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:27:02.945+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:27:02.945+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:27:02.963+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:27:02.963+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:26:00+00:00, run_after=2023-12-25T13:27:00+00:00
+[2023-12-25T13:27:02.977+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.055 seconds
+[2023-12-25T13:27:33.261+0000] {processor.py:157} INFO - Started process (PID=30827) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:27:33.261+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:27:33.262+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:27:33.262+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:27:33.273+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:27:33.427+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:27:33.427+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:27:33.443+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:27:33.443+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:26:00+00:00, run_after=2023-12-25T13:27:00+00:00
+[2023-12-25T13:27:33.458+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.199 seconds
+[2023-12-25T13:28:04.280+0000] {processor.py:157} INFO - Started process (PID=30931) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:28:04.281+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:28:04.282+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:28:04.281+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:28:04.293+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:28:04.302+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:28:04.302+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:28:04.322+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:28:04.321+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:27:00+00:00, run_after=2023-12-25T13:28:00+00:00
+[2023-12-25T13:28:04.337+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.060 seconds
+[2023-12-25T13:28:34.363+0000] {processor.py:157} INFO - Started process (PID=31024) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:28:34.363+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:28:34.364+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:28:34.364+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:28:34.376+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:28:34.452+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:28:34.452+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:28:34.531+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:28:34.531+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:27:00+00:00, run_after=2023-12-25T13:28:00+00:00
+[2023-12-25T13:28:34.543+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.184 seconds
+[2023-12-25T13:29:04.697+0000] {processor.py:157} INFO - Started process (PID=31137) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:29:04.698+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:29:04.699+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:29:04.699+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:29:04.709+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:29:04.730+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:29:04.730+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:29:04.747+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:29:04.747+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:28:00+00:00, run_after=2023-12-25T13:29:00+00:00
+[2023-12-25T13:29:04.762+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.067 seconds
+[2023-12-25T13:29:35.047+0000] {processor.py:157} INFO - Started process (PID=31240) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:29:35.048+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:29:35.048+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:29:35.048+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:29:35.063+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:29:35.140+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:29:35.140+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:29:35.155+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:29:35.155+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:28:00+00:00, run_after=2023-12-25T13:29:00+00:00
+[2023-12-25T13:29:35.168+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.124 seconds
+[2023-12-25T13:30:05.332+0000] {processor.py:157} INFO - Started process (PID=31352) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:30:05.333+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:30:05.334+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:30:05.333+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:30:05.346+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:30:05.368+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:30:05.368+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:30:05.386+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:30:05.386+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:29:00+00:00, run_after=2023-12-25T13:30:00+00:00
+[2023-12-25T13:30:05.399+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.070 seconds
+[2023-12-25T13:30:35.910+0000] {processor.py:157} INFO - Started process (PID=31465) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:30:35.910+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:30:35.911+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:30:35.911+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:30:35.926+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:30:36.077+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:30:36.077+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:30:36.093+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:30:36.093+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:29:00+00:00, run_after=2023-12-25T13:30:00+00:00
+[2023-12-25T13:30:36.105+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.198 seconds
+[2023-12-25T13:31:06.367+0000] {processor.py:157} INFO - Started process (PID=31569) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:31:06.369+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:31:06.369+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:31:06.369+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:31:06.383+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:31:06.401+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:31:06.401+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:31:06.418+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:31:06.418+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:30:00+00:00, run_after=2023-12-25T13:31:00+00:00
+[2023-12-25T13:31:06.434+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.069 seconds
+[2023-12-25T13:31:36.622+0000] {processor.py:157} INFO - Started process (PID=31682) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:31:36.623+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:31:36.623+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:31:36.623+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:31:36.633+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:31:36.706+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:31:36.706+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:31:36.784+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:31:36.783+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:30:00+00:00, run_after=2023-12-25T13:31:00+00:00
+[2023-12-25T13:31:36.796+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.176 seconds
+[2023-12-25T13:32:07.209+0000] {processor.py:157} INFO - Started process (PID=31774) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:32:07.209+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:32:07.210+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:32:07.210+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:32:07.220+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:32:07.238+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:32:07.238+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:32:07.257+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:32:07.257+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:31:00+00:00, run_after=2023-12-25T13:32:00+00:00
+[2023-12-25T13:32:07.271+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.065 seconds
+[2023-12-25T13:32:37.289+0000] {processor.py:157} INFO - Started process (PID=31877) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:32:37.289+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:32:37.290+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:32:37.290+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:32:37.300+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:32:37.377+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:32:37.377+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:32:37.392+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:32:37.392+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:31:00+00:00, run_after=2023-12-25T13:32:00+00:00
+[2023-12-25T13:32:37.472+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.185 seconds
+[2023-12-25T13:33:07.841+0000] {processor.py:157} INFO - Started process (PID=31991) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:33:07.847+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:33:07.847+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:33:07.847+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:33:07.858+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:33:07.881+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:33:07.881+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:33:07.899+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:33:07.899+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:32:00+00:00, run_after=2023-12-25T13:33:00+00:00
+[2023-12-25T13:33:07.914+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.075 seconds
+[2023-12-25T13:33:38.420+0000] {processor.py:157} INFO - Started process (PID=32104) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:33:38.420+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:33:38.421+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:33:38.421+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:33:38.436+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:33:38.589+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:33:38.589+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:33:38.604+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:33:38.604+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:32:00+00:00, run_after=2023-12-25T13:33:00+00:00
+[2023-12-25T13:33:38.618+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.201 seconds
+[2023-12-25T13:34:08.780+0000] {processor.py:157} INFO - Started process (PID=32209) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:34:08.782+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:34:08.782+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:34:08.782+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:34:08.793+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:34:08.814+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:34:08.814+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:34:08.905+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:34:08.905+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:33:00+00:00, run_after=2023-12-25T13:34:00+00:00
+[2023-12-25T13:34:08.918+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.141 seconds
+[2023-12-25T13:34:39.133+0000] {processor.py:157} INFO - Started process (PID=32322) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:34:39.133+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:34:39.134+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:34:39.134+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:34:39.146+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:34:39.155+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:34:39.155+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:34:39.176+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:34:39.176+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:33:00+00:00, run_after=2023-12-25T13:34:00+00:00
+[2023-12-25T13:34:39.191+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.060 seconds
+[2023-12-25T13:35:09.670+0000] {processor.py:157} INFO - Started process (PID=32405) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:35:09.673+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:35:09.675+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:35:09.674+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:35:09.689+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:35:09.853+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:35:09.852+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:35:09.869+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:35:09.869+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:34:00+00:00, run_after=2023-12-25T13:35:00+00:00
+[2023-12-25T13:35:09.885+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.219 seconds
+[2023-12-25T13:35:40.229+0000] {processor.py:157} INFO - Started process (PID=32518) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:35:40.230+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:35:40.230+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:35:40.230+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:35:40.246+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:35:40.272+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:35:40.272+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:35:40.379+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:35:40.379+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:34:00+00:00, run_after=2023-12-25T13:35:00+00:00
+[2023-12-25T13:35:40.394+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.168 seconds
+[2023-12-25T13:36:10.742+0000] {processor.py:157} INFO - Started process (PID=32631) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:36:10.744+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:36:10.745+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:36:10.745+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:36:10.760+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:36:10.770+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:36:10.770+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:36:10.788+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:36:10.788+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:35:00+00:00, run_after=2023-12-25T13:36:00+00:00
+[2023-12-25T13:36:10.800+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.061 seconds
+[2023-12-25T13:36:41.084+0000] {processor.py:157} INFO - Started process (PID=32735) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:36:41.085+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:36:41.086+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:36:41.085+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:36:41.096+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:36:41.240+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:36:41.239+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:36:41.255+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:36:41.255+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:35:00+00:00, run_after=2023-12-25T13:36:00+00:00
+[2023-12-25T13:36:41.268+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.186 seconds
+[2023-12-25T13:37:11.676+0000] {processor.py:157} INFO - Started process (PID=32848) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:37:11.678+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:37:11.679+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:37:11.678+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:37:11.689+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:37:11.709+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:37:11.709+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:37:11.792+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:37:11.792+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:36:00+00:00, run_after=2023-12-25T13:37:00+00:00
+[2023-12-25T13:37:11.807+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.133 seconds
+[2023-12-25T13:37:42.118+0000] {processor.py:157} INFO - Started process (PID=32961) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:37:42.119+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:37:42.120+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:37:42.119+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:37:42.131+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:37:42.139+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:37:42.139+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:37:42.156+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:37:42.156+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:36:00+00:00, run_after=2023-12-25T13:37:00+00:00
+[2023-12-25T13:37:42.167+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.051 seconds
+[2023-12-25T13:38:12.746+0000] {processor.py:157} INFO - Started process (PID=33065) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:38:12.748+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:38:12.749+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:38:12.749+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:38:12.765+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:38:12.907+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:38:12.907+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:38:12.936+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:38:12.936+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:37:00+00:00, run_after=2023-12-25T13:38:00+00:00
+[2023-12-25T13:38:12.951+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.208 seconds
+[2023-12-25T13:38:43.156+0000] {processor.py:157} INFO - Started process (PID=33178) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:38:43.158+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:38:43.159+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:38:43.159+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:38:43.170+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:38:43.190+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:38:43.189+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:38:43.207+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:38:43.207+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:37:00+00:00, run_after=2023-12-25T13:38:00+00:00
+[2023-12-25T13:38:43.221+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.067 seconds
+[2023-12-25T13:39:13.642+0000] {processor.py:157} INFO - Started process (PID=33291) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:39:13.644+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:39:13.644+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:39:13.644+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:39:13.655+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:39:13.665+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:39:13.664+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:39:13.683+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:39:13.682+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:38:00+00:00, run_after=2023-12-25T13:39:00+00:00
+[2023-12-25T13:39:13.696+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.056 seconds
+[2023-12-25T13:39:44.095+0000] {processor.py:157} INFO - Started process (PID=33395) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:39:44.097+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:39:44.097+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:39:44.097+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:39:44.109+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:39:44.260+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:39:44.259+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:39:44.275+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:39:44.275+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:38:00+00:00, run_after=2023-12-25T13:39:00+00:00
+[2023-12-25T13:39:44.288+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.195 seconds
+[2023-12-25T13:40:14.753+0000] {processor.py:157} INFO - Started process (PID=33507) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:40:14.754+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:40:14.754+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:40:14.754+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:40:14.766+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:40:14.786+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:40:14.786+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:40:14.805+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:40:14.805+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:39:00+00:00, run_after=2023-12-25T13:40:00+00:00
+[2023-12-25T13:40:14.818+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.067 seconds
+[2023-12-25T13:40:45.607+0000] {processor.py:157} INFO - Started process (PID=33620) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:40:45.609+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:40:45.609+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:40:45.609+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:40:45.621+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:40:45.630+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:40:45.629+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:40:45.649+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:40:45.649+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:39:00+00:00, run_after=2023-12-25T13:40:00+00:00
+[2023-12-25T13:40:45.730+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.124 seconds
+[2023-12-25T13:41:16.533+0000] {processor.py:157} INFO - Started process (PID=33724) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:41:16.534+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:41:16.535+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:41:16.534+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:41:16.546+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:41:16.692+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:41:16.692+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:41:16.706+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:41:16.706+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:40:00+00:00, run_after=2023-12-25T13:41:00+00:00
+[2023-12-25T13:41:16.718+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.188 seconds
+[2023-12-25T13:41:47.252+0000] {processor.py:157} INFO - Started process (PID=33837) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:41:47.253+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:41:47.254+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:41:47.254+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:41:47.270+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:41:47.293+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:41:47.293+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:41:47.312+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:41:47.312+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:40:00+00:00, run_after=2023-12-25T13:41:00+00:00
+[2023-12-25T13:41:47.392+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.143 seconds
+[2023-12-25T13:42:17.642+0000] {processor.py:157} INFO - Started process (PID=33949) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:42:17.644+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:42:17.644+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:42:17.644+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:42:17.656+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:42:17.666+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:42:17.666+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:42:17.764+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:42:17.764+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:41:00+00:00, run_after=2023-12-25T13:42:00+00:00
+[2023-12-25T13:42:17.778+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.139 seconds
+[2023-12-25T13:42:48.204+0000] {processor.py:157} INFO - Started process (PID=34053) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:42:48.206+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:42:48.206+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:42:48.206+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:42:48.287+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:42:48.356+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:42:48.356+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:42:48.371+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:42:48.371+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:41:00+00:00, run_after=2023-12-25T13:42:00+00:00
+[2023-12-25T13:42:48.383+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.181 seconds
+[2023-12-25T13:43:19.014+0000] {processor.py:157} INFO - Started process (PID=34174) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:43:19.015+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:43:19.016+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:43:19.015+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:43:19.032+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:43:19.054+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:43:19.054+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:43:19.076+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:43:19.076+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:43:00+00:00, run_after=2023-12-25T13:44:00+00:00
+[2023-12-25T13:43:19.094+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.083 seconds
+[2023-12-25T13:43:49.671+0000] {processor.py:157} INFO - Started process (PID=34287) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:43:49.672+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:43:49.673+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:43:49.673+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:43:49.684+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:43:49.693+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:43:49.693+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:43:49.713+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:43:49.713+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:43:00+00:00, run_after=2023-12-25T13:44:00+00:00
+[2023-12-25T13:43:49.729+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.060 seconds
+[2023-12-25T13:44:19.940+0000] {processor.py:157} INFO - Started process (PID=34396) to work on /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:44:19.941+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/예비용/consumer.py for tasks to queue
+[2023-12-25T13:44:19.942+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:44:19.942+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:44:19.953+0000] {processor.py:836} INFO - DAG(s) dict_keys(['consumer_dag']) retrieved from /opt/airflow/dags/예비용/consumer.py
+[2023-12-25T13:44:20.033+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:44:20.032+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-25T13:44:20.049+0000] {logging_mixin.py:150} INFO - [2023-12-25T13:44:20.049+0000] {dag.py:3508} INFO - Setting next_dagrun for consumer_dag to 2023-12-25T13:43:00+00:00, run_after=2023-12-25T13:44:00+00:00
+[2023-12-25T13:44:20.062+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/예비용/consumer.py took 0.124 seconds

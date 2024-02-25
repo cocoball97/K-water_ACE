@@ -1,0 +1,14 @@
+[2024-01-09T11:24:01.972+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: modeling_dag.consume_task scheduled__2024-01-09T11:23:00+00:00 [queued]>
+[2024-01-09T11:24:01.978+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: modeling_dag.consume_task scheduled__2024-01-09T11:23:00+00:00 [queued]>
+[2024-01-09T11:24:01.978+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2024-01-09T11:24:01.987+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): consume_task> on 2024-01-09 11:23:00+00:00
+[2024-01-09T11:24:01.992+0000] {standard_task_runner.py:57} INFO - Started process 249 to run task
+[2024-01-09T11:24:01.994+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'modeling_dag', 'consume_task', 'scheduled__2024-01-09T11:23:00+00:00', '--job-id', '374', '--raw', '--subdir', 'DAGS_FOLDER/modeling.py', '--cfg-path', '/tmp/tmpps7uqh9i']
+[2024-01-09T11:24:01.996+0000] {standard_task_runner.py:85} INFO - Job 374: Subtask consume_task
+[2024-01-09T11:24:02.022+0000] {task_command.py:410} INFO - Running <TaskInstance: modeling_dag.consume_task scheduled__2024-01-09T11:23:00+00:00 [running]> on host 93456042b127
+[2024-01-09T11:24:02.077+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='modeling_dag' AIRFLOW_CTX_TASK_ID='consume_task' AIRFLOW_CTX_EXECUTION_DATE='2024-01-09T11:23:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-09T11:23:00+00:00'
+[2024-01-09T11:24:22.080+0000] {logging_mixin.py:150} INFO - 메시지 없음
+[2024-01-09T11:24:22.081+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-01-09T11:24:22.088+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=modeling_dag, task_id=consume_task, execution_date=20240109T112300, start_date=20240109T112401, end_date=20240109T112422
+[2024-01-09T11:24:22.112+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-01-09T11:24:22.129+0000] {taskinstance.py:2653} INFO - 2 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2023-10-21T22:35:48.241+0900] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: combined_dag.insert_to_db manual__2023-10-21T13:35:37.270596+00:00 [queued]>
+[2023-10-21T22:35:48.248+0900] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: combined_dag.insert_to_db manual__2023-10-21T13:35:37.270596+00:00 [queued]>
+[2023-10-21T22:35:48.248+0900] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-10-21T22:35:48.260+0900] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): insert_to_db> on 2023-10-21 13:35:37.270596+00:00
+[2023-10-21T22:35:48.265+0900] {standard_task_runner.py:57} INFO - Started process 146347 to run task
+[2023-10-21T22:35:48.267+0900] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'combined_dag', 'insert_to_db', 'manual__2023-10-21T13:35:37.270596+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/combined_dag(real).py', '--cfg-path', '/tmp/tmp_uaqyf_j']
+[2023-10-21T22:35:48.268+0900] {standard_task_runner.py:85} INFO - Job 66: Subtask insert_to_db
+[2023-10-21T22:35:48.469+0900] {task_command.py:410} INFO - Running <TaskInstance: combined_dag.insert_to_db manual__2023-10-21T13:35:37.270596+00:00 [running]> on host DESKTOP-HIRTBK6.
+[2023-10-21T22:35:48.767+0900] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='combined_dag' AIRFLOW_CTX_TASK_ID='insert_to_db' AIRFLOW_CTX_EXECUTION_DATE='2023-10-21T13:35:37.270596+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-21T13:35:37.270596+00:00'
+[2023-10-21T22:35:49.143+0900] {logging_mixin.py:150} INFO - [[4.16655, 6.63255, 21.945510000000002, 313.64442, 55.37745, 3238.61283]]
+[2023-10-21T22:35:49.143+0900] {combined_dag(real).py:86} INFO - [[4.16655, 6.63255, 21.945510000000002, 313.64442, 55.37745, 3238.61283]]
+[2023-10-21T22:35:49.199+0900] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/airflow_env/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/user/anaconda3/envs/airflow_env/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/user/airflow/dags/combined_dag(real).py", line 97, in insert_to_db
+    password="12345678"
+  File "/home/user/anaconda3/envs/airflow_env/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError
+[2023-10-21T22:35:49.259+0900] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=combined_dag, task_id=insert_to_db, execution_date=20231021T133537, start_date=20231021T133548, end_date=20231021T133549
+[2023-10-21T22:35:49.273+0900] {standard_task_runner.py:109} ERROR - Failed to execute job 66 for task insert_to_db (; 146347)
+[2023-10-21T22:35:49.283+0900] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-10-21T22:35:49.361+0900] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

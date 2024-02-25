@@ -1,0 +1,18 @@
+[2023-10-21T22:29:02.290+0900] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: combined_dag.generate_random_data_task scheduled__2023-10-21T13:28:00+00:00 [queued]>
+[2023-10-21T22:29:02.296+0900] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: combined_dag.generate_random_data_task scheduled__2023-10-21T13:28:00+00:00 [queued]>
+[2023-10-21T22:29:02.297+0900] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-10-21T22:29:02.306+0900] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): generate_random_data_task> on 2023-10-21 13:28:00+00:00
+[2023-10-21T22:29:02.310+0900] {standard_task_runner.py:57} INFO - Started process 140464 to run task
+[2023-10-21T22:29:02.312+0900] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'combined_dag', 'generate_random_data_task', 'scheduled__2023-10-21T13:28:00+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/combined_dag(real).py', '--cfg-path', '/tmp/tmp3oupdelv']
+[2023-10-21T22:29:02.312+0900] {standard_task_runner.py:85} INFO - Job 35: Subtask generate_random_data_task
+[2023-10-21T22:29:02.520+0900] {task_command.py:410} INFO - Running <TaskInstance: combined_dag.generate_random_data_task scheduled__2023-10-21T13:28:00+00:00 [running]> on host DESKTOP-HIRTBK6.
+[2023-10-21T22:29:02.814+0900] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='combined_dag' AIRFLOW_CTX_TASK_ID='generate_random_data_task' AIRFLOW_CTX_EXECUTION_DATE='2023-10-21T13:28:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-21T13:28:00+00:00'
+[2023-10-21T22:29:03.109+0900] {logging_mixin.py:150} WARNING - /home/user/airflow/dags/combined_dag(real).py:41 SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2023-10-21T22:29:03.117+0900] {python.py:183} INFO - Done. Returned value was: ([[27.09378, 6.73056, 24.01875, 284.21253, 47.9376, 2083.6575000000003]], [[32.112135], [30.530381000000002], [29.502115999999997]], MinMaxScaler())
+[2023-10-21T22:29:03.251+0900] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=combined_dag, task_id=generate_random_data_task, execution_date=20231021T132800, start_date=20231021T132902, end_date=20231021T132903
+[2023-10-21T22:29:03.287+0900] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-10-21T22:29:03.368+0900] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

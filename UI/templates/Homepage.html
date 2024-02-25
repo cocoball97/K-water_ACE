@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+<!--    <meta http-equiv="refresh" content="60">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>K-Water 스마트 응집제 투입률</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Homepage.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery-1.9.1.min.js') }}" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
+    <meta name="generator" content="Nicepage 5.19.5, nicepage.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "아현쓰 보이니",
+		"url": "/"
+}</script>
+<script>
+function updateContent() {
+    fetch('/get_latest_data')
+    .then(response => response.json())
+    .then(data => {
+        // 데이터 업데이트 로직
+      var units = {
+    turb: " NTU",
+    ph: " pH",
+    temp: " °C",
+    elec: " dS/m",
+    alk: "m*3/h"
+  };
+
+        document.querySelector('#u-text-6-turb').textContent = parseFloat(data[0][1]).toFixed(2) + units.turb;
+        document.querySelector('#u-text-6-ph').textContent = parseFloat(data[0][2]).toFixed(2) + units.ph;
+        document.querySelector('#u-text-6-temp').textContent = parseFloat(data[0][3]).toFixed(2) + units.temp;
+        document.querySelector('#u-text-6-elec').textContent = parseFloat(data[0][4]).toFixed(2) + units.elec;
+        document.querySelector('#u-text-6-alk').textContent = parseFloat(data[0][5]).toFixed(2) + units.alk;
+        document.querySelector('#u-text-5-pacs').textContent = parseFloat(data[0][6]).toFixed(2);
+        document.querySelector('#u-text-18-fut-turb').textContent = parseFloat(data[0][9]).toFixed(2);
+        // document.querySelector('#u-btn-4-tur').innerHTML = "원수 탁도 예측 값"  + "<br>" + data[0][0];
+        document.querySelector('#u-text2-3-turb').textContent = "탁도 : " + parseFloat(data[0][1]).toFixed(2) + units.turb;
+        document.querySelector('#u-text-2-water').textContent = parseFloat(data[0][8]).toFixed(2) + "l/h";
+        document.querySelector('#u-text2-3-temp').textContent = "수온 : " + parseFloat(data[0][3]).toFixed(2) + units.temp;
+        document.querySelector('#u-text2-3-pH').textContent = "pH : " + parseFloat(data[0][2]).toFixed(2) + units.ph;
+        document.querySelector('#u-text2-3-elec').textContent = "전기전도도 : " + parseFloat(data[0][4]).toFixed(2) + units.elec;
+        document.querySelector('#u-text2-3-alk').textContent = "알칼리도 : " + parseFloat(data[0][5]).toFixed(2) + units.alk;
+        document.querySelector('#u-text-2-2-pacs').textContent = parseFloat(data[0][6]).toFixed(2) + ' ppm';
+        document.querySelector('#update-time').textContent = "Last Updated : " + data[0][10].split(" ")[0];
+
+        updateChart(chart, data, 5);
+        updateChart(chart2, data, 1);
+        updateChart(chart3, data, 2);
+        updateChart(chart4, data, 4);
+        updateChart(chart5, data, 3);
+        updateChart(chart6, data, 6);
+
+        // data[0][9]에서 시간을 가져옵니다.
+        var currentTime = new Date(data[0][0]);
+
+        // 1시간을 추가합니다.
+        var oneHourLater = new Date(currentTime.getTime() + 60 * 60 * 1000);
+
+        // 시간을 원하는 형식으로 포맷합니다. (예: "HH:MM AM/PM")
+        var formattedTime = oneHourLater.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+
+        // 결과를 HTML 요소에 업데이트합니다.
+        document.querySelector('#u-btn-4-tur').innerHTML = "1시간 뒤 원수 탁도 예측 값" + "<br>" + formattedTime;
+
+        // 배경색 업데이트 로직
+        var dataValue = data[0][7]; // 데이터에서 값을 할당합니다.
+
+        // 초기화: 모든 링크의 배경색을 기본값으로 설정합니다.
+        document.querySelector(".class-1-link").style.cssText = '';
+        document.querySelector(".class-2-link").style.cssText = '';
+        document.querySelector(".class-3-link").style.cssText = '';
+
+        // 새로운 데이터 값에 따라 조건을 확인하고 배경색을 업데이트합니다.
+        if (dataValue === 0.0 || dataValue === 2.0) {
+            document.querySelector(".class-1-link").style.cssText = 'background-color: orange !important;';
+        } else if (dataValue === 3.0) {
+            document.querySelector(".class-2-link").style.cssText = 'background-color: orange !important;';
+        } else if (dataValue === 1.0) {
+            document.querySelector(".class-3-link").style.cssText = 'background-color: orange !important;';
+        }
+
+        // // 알림 및 배경색 변경 로직
+        // var dataValue2 = data[0][9];
+        // var alarmText = document.querySelector(".u-text-2")
+        // var header = document.querySelector(".u-container-layout-2");
+        //
+        // function changeBackgroundColor() {
+        //     var colors = ["transparent", '#ff3333']; // 오타 수정: "transperant" -> "transparent"
+        //     var i = 0;
+        //     setInterval(function() {
+        //         header.style.cssText = "background-color: " + colors[i % colors.length] + " !important;";
+        //         console.log("Changing color to: ", colors[i % colors.length]); // 색상 변경 로그
+        //         i++;
+        //     }, 1000);
+        // }
+        //
+        // if (dataValue2 > 100) {
+        //     alarmText.textContent = "고탁도주의";
+        //     changeBackgroundColor();
+        // }
+
+        var shape = document.querySelector('.u-shape-2');
+        var alertText = document.getElementById('alert-text');
+        var flashing = false;
+
+        function toggleColor() {
+            var value = data[0][9];
+
+            if (value >= 100) {
+                var color;
+                var visibility;
+                if (flashing) {
+                    color = 'red';
+                    visibility = 'visible';
+                } else {
+                    color = 'orange';
+                    visibility = 'hidden';
+                }
+                shape.style.backgroundColor = color;
+                alertText.innerHTML = "※ 고탁도 주의 !";
+                alertText.style.position = "absolute";
+                alertText.style.fontFamily = "Noto Sans KR', sans-serif;";
+                alertText.style.color = 'orangered'; // 글자색 변경
+                alertText.style.fontSize = '1.2rem';
+                alertText.style.paddingLeft = '5px';
+                alertText.style.marginTop = '170px';
+                alertText.style.visibility = visibility; // 텍스트 visibility 변경
+                flashing = !flashing;
+            } else {
+                shape.style.backgroundColor = 'orange';
+                alertText.innerHTML = ""; // 글자 없애기 또는 다른 메시지 설정 가능
+            }
+        }
+
+        // 초기 상태를 설정하기 위해 toggleColor 함수를 한 번 호출
+        toggleColor();
+
+        // 1초마다 toggleColor 함수를 호출하여 색상을 변경하고 깜빡임 효과를 적용
+        setInterval(toggleColor, 800);
+
+
+
+        console.log("Success!")
+    })
+    .catch(error => console.error('Fetching data error:', error));
+}
+
+function setupPeriodicUpdate(interval) {
+    setInterval(updateContent, interval);
+}
+
+window.onload = function() {
+    updateContent();  // 첫 데이터 업데이트
+    setupPeriodicUpdate(20000); // 그 후, 30초마다 데이터 업데이트
+};
+
+
+var chart;
+document.addEventListener("DOMContentLoaded", function() {
+    var ctx = document.getElementById('myChart1').getContext('2d');
+    chart = new Chart(ctx, {
+        type : 'line',
+        data : {
+            labels : [],
+            datasets : [{
+                label : '시간별 알칼리도 현황',
+                data : [],
+                borderColor : 'rgb(255, 165, 0)',
+                borderWidth : 1,
+                fill : false
+            }]
+        },
+        options : {
+            plugins : {
+                legend : {
+                    display : false
+                },
+                title: {
+                    display : true,
+                    text : '시간별 알칼리도 현황',
+                    font : {
+                        size : 20,
+                    },
+                    padding : {
+                        top : 10,
+                    }
+                }
+            }
+        }
+    });
+});
+
+var chart2;
+document.addEventListener("DOMContentLoaded", function() {
+    var ctx2 = document.getElementById('myChart2').getContext('2d');
+    chart2 = new Chart(ctx2, {
+        type : 'line',
+        data : {
+            labels : [],
+            datasets : [{
+                label : '시간별 탁도 현황',
+                data : [],
+                borderColor : 'rgb(255, 165, 0)',
+                borderWidth : 1,
+                fill : false
+            }]
+        },
+        options : {
+            plugins : {
+                legend : {
+                    display : false
+                },
+                title: {
+                    display : true,
+                    text : '시간별 탁도 현황',
+                    font : {
+                        size : 20,
+                    },
+                    padding : {
+                        top : 10,
+                    }
+                }
+            }
+        }
+    });
+});
+
+var chart3;
+document.addEventListener("DOMContentLoaded", function() {
+    var ctx3 = document.getElementById('myChart3').getContext('2d');
+    chart3 = new Chart(ctx3, {
+        type : 'line',
+        data : {
+            labels : [],
+            datasets : [{
+                label : '시간별 pH 현황',
+                data : [],
+                borderColor : 'rgb(255, 165, 0)',
+                borderWidth : 1,
+                fill : false
+            }]
+        },
+        options : {
+            plugins : {
+                legend : {
+                    display : false
+                },
+                title: {
+                    display : true,
+                    text : '시간별 pH 현황',
+                    font : {
+                        size : 20,
+                    },
+                    padding : {
+                        top : 10,
+                    }
+                }
+            }
+        }
+    });
+});
+
+var chart4;
+document.addEventListener("DOMContentLoaded", function() {
+    var ctx4 = document.getElementById('myChart4').getContext('2d');
+    chart4 = new Chart(ctx4, {
+        type : 'line',
+        data : {
+            labels : [],
+            datasets : [{
+                label : '시간별 전기전도도 현황',
+                data : [],
+                borderColor : 'rgb(255, 165, 0)',
+                borderWidth : 1,
+                fill : false
+            }]
+        },
+        options : {
+            plugins : {
+                legend : {
+                    display : false
+                },
+                title: {
+                    display : true,
+                    text : '시간별 전기전도도 현황',
+                    font : {
+                        size : 20,
+                    },
+                    padding : {
+                        top : 10,
+                    }
+                }
+            }
+        }
+    });
+});
+
+var chart5;
+document.addEventListener("DOMContentLoaded", function() {
+    var ctx5 = document.getElementById('myChart5').getContext('2d');
+    chart5 = new Chart(ctx5, {
+        type : 'line',
+        data : {
+            labels : [],
+            datasets : [{
+                label : '시간별 수온 현황',
+                data : [],
+                borderColor : 'rgb(255, 165, 0)',
+                borderWidth : 1,
+                fill : false
+            }]
+        },
+        options : {
+            plugins : {
+                legend : {
+                    display : false
+                },
+                title: {
+                    display : true,
+                    text : '시간별 수온 현황',
+                    font : {
+                        size : 20,
+                    },
+                    padding : {
+                        top : 10,
+                    }
+                }
+            }
+        }
+    });
+});
+
+var chart6;
+document.addEventListener("DOMContentLoaded", function() {
+    var ctx6 = document.getElementById('myChart6').getContext('2d');
+    chart6 = new Chart(ctx6, {
+        type : 'line',
+        data : {
+            labels : [],
+            datasets : [{
+                label : '시간별 PACS 투입률 현황',
+                data : [],
+                borderColor : 'rgb(255, 165, 0)',
+                borderWidth : 1,
+                fill : false
+            }]
+        },
+        options : {
+            plugins : {
+                legend : {
+                    display : false
+                },
+                title: {
+                    display : true,
+                    text : '시간별 PACS 투입률 현황',
+                    font : {
+                        size : 20,
+                    },
+                    padding : {
+                        top : 10,
+                    }
+                }
+            }
+        }
+    });
+});
+function updateChart(chart, data, dataIndex) {
+
+    var reversedData = data.slice().reverse();
+    chart.data.labels = reversedData.map(row => row[0].split(" ")[1]);
+    chart.data.datasets[0].data = reversedData.map(row => row[dataIndex]);
+    chart.update();
+}
+
+</script>
+
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Homepage">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="/">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-image u-shading u-header" id="sec-45fe"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <h5 class="u-custom-font u-font-merriweather u-text u-text-default u-text-1"  style = "font-family: 'Do Hyeon', sans-serif;">실시간 최적 응집제 투입률 모니터링</h5>
+        <img class="u-image u-image-contain u-image-default u-image-1" src="static/images/k-water.png" alt="" data-image-width="479" data-image-height="229">
+        <div class="u-container-style u-custom-color-8 u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+<!--            <img class="u-image u-image-contain u-image-default u-image-2" src="static/images/image-41.png" alt="" data-image-width="768" data-image-height="1036">-->
+<!--            <div class="u-border-2 u-border-white u-container-style u-group u-shape-rectangle u-group-2">-->
+<!--              <div class="u-container-layout u-container-layout-2">-->
+<!--                  <h5 class="u-custom-font u-text u-text-font u-text-2" style = "font-family: 'Do Hyeon', sans-serif;">알림 없음</h5>-->
+<!--              </div>-->
+<!--          </div>-->
+
+            <img class="u-image u-image-contain u-image-round u-preserve-proportions u-radius-50 u-image-3" src="static/images/2.gif" alt="" data-image-width="864" data-image-height="864">
+            <p class="u-text u-text-4" style = "font-family: 'Noto Sans KR', sans-serif;">현재 시간<br>
+            <div class = "current-time" id = 'time' style = "font-family: 'Noto Sans KR', sans-serif;"></div>
+            <script>
+              function updateTime() {
+                var now = new Date();
+                var year = now.getFullYear();
+                var month = String(now.getMonth() + 1).padStart(2, '0'); // months are zero-based in JavaScript
+                var day = String(now.getDate()).padStart(2, '0');
+                var hour = String(now.getHours()).padStart(2, '0');
+                var minute = String(now.getMinutes()).padStart(2, '0');
+
+                var weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+                var weekday = weekdays[now.getDay()];
+
+                document.getElementById("time").innerHTML = year + '/' + month + '/' + day + ' ' + weekday + ', ' + hour + ':' + minute;
+              }
+
+              setInterval(updateTime, 1000); // Update the time every second
+            </script>
+            <h5 class="u-custom-font u-text u-text-font u-text-3" style = "font-family: 'Noto Sans KR', sans-serif;"> 기후 위기 시계&nbsp;</h5>
+            <style>
+              #countdown {
+                font-size: 1.3rem;
+                margin-left:850px;
+                margin-top : -50px;
+                font-family: 'Noto Sans KR', sans-serif;
+              }
+              #labels {
+                font-size: 0.5px;
+                margin-left:850px;
+                margin-top : -10px;
+                font-family: 'Noto Sans KR', sans-serif;
+              }
+            </style>
+            <div class="u-custom-font u-text u-text-font u-countdown-2" id="countdown">
+              <span id="years"></span>:
+              <span id="months"></span>:
+              <span id="days"></span>:
+              <span id="hours"></span>:
+              <span id="minutes"></span>:
+              <span id="seconds"></span>
+            </div>
+            <div id="labels">
+              year&nbsp;:&nbsp;month&nbsp;:&nbsp;day&nbsp;:&nbsp;hour&nbsp;:&nbsp;minute&nbsp;:&nbsp;second
+            </div>
+            <script>
+              function countdown() {
+                var countDownDate = new Date("2030-01-01T00:00:00Z").getTime();
+                var now = new Date().getTime();
+                var timeLeft = countDownDate - now;
+
+                var years = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 365.25));
+                timeLeft -= years * (1000 * 60 * 60 * 24 * 365.25);
+
+                var months = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 30));
+                timeLeft -= months * (1000 * 60 * 60 * 24 * 30);
+
+                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                timeLeft -= days * (1000 * 60 * 60 * 24);
+
+                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("years").innerHTML = String(years).padStart(2, '0');
+                document.getElementById("months").innerHTML = String(months).padStart(2, '0');
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                if (timeLeft < 0) {
+                  clearInterval(x);
+                  document.getElementById("countdown").innerHTML = "Happy New Year!";
+                  document.getElementById("labels").style.display = "none";
+                }
+              }
+
+              var x = setInterval(countdown, 1000);
+            </script>
+
+          </div>
+          </div>
+        </div>
+      </div></header>
+    <section class="u-border-2 u-border-grey-90 u-clearfix u-image u-lightbox u-shading u-section-1" id="sec-7731" data-image-width="728" data-image-height="485">
+      <div class="u-clearfix u-sheet u-sheet-1">
+<!--        <p class = "u-text-model" id = "update-time" style = "font-family: 'Noto Sans KR', sans-serif;"></p>-->
+        <p class="u-text u-text-palette-1-light-2 u-text-1" style = "font-family: 'Do Hyeon', sans-serif;">&nbsp;데이터 모니터링</p>
+        <p class="u-text u-text-palette-1-light-2 u-text-2" style = "font-family: 'Do Hyeon', sans-serif;">수질 그룹</p>
+        <p class="u-text u-text-palette-1-light-2 u-text-3" style = "font-family: 'Do Hyeon', sans-serif;"> 실시간 PACS 투입률</p>
+        <div class="u-border-2 u-border-palette-1-light-1 u-container-style u-group u-group-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <div class="custom-expanded u-container-style u-group u-shape-rectangle u-group-2">
+              <div class="u-container-layout u-container-layout-2">
+                <a class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-heading-font u-hover-palette-5-dark-2 u-radius-50 class-1-link"> CLASS 1. Low turbidity</a>
+                <a class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-heading-font u-hover-palette-5-dark-2 u-radius-50 class-2-link"> CLASS 2. Middle turbidity</a>
+                <a class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-heading-font u-hover-palette-5-dark-2 u-radius-50 class-3-link"> CLASS 3. high turbidity</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-border-2 u-border-palette-1-light-1 u-container-style u-group u-group-3">
+          <div class="u-container-layout u-container-layout-3">
+            <div class="u-container-layout u-container-layout-4">
+              <h5 class="u-text u-text-4" style = "font-family: 'Do Hyeon', sans-serif;" >PACS&nbsp;&nbsp;</h5>
+              <div class="u-custom-color-6 u-preserve-proportions u-shape u-shape-circle u-shape-1"></div>
+              <p id = "u-text-5-pacs" class="u-text u-text-default u-text-5" style = "font-family: 'Noto Sans KR', sans-serif;"></p>
+              <p class="u-text u-text-default u-text-31" style = "font-family: 'Noto Sans KR', sans-serif;">ppm</p>
+            </div>
+          </div>
+        </div>
+        <div class="u-border-2 u-border-palette-1-light-1 u-container-style u-group u-group-5">
+          <div class="u-container-layout u-container-layout-5">
+            <h6 id = "u-text-6-turb" class="u-text u-text-default u-text-6" style = "font-family: 'Noto Sans KR', sans-serif;"> NTU</h6>
+            <h6 class="u-text u-text-default u-text-7" style = "font-family: 'Noto Sans KR', sans-serif;">원수 탁도</h6>
+            <h6 class="u-text u-text-default u-text-8" style = "font-family: 'Noto Sans KR', sans-serif;">pH</h6>
+            <h6 id = "u-text-6-ph" class="u-text u-text-default u-text-9" style = "font-family: 'Noto Sans KR', sans-serif;"> pH</h6>
+            <h6 id = "u-text-6-temp" class="u-text u-text-default u-text-10" style = "font-family: 'Noto Sans KR', sans-serif;"> <b>°<span style="font-weight: 400;">C</span></b>
+            </h6>
+            <h6 class="u-text u-text-default u-text-11" style = "font-family: 'Noto Sans KR', sans-serif;">수온</h6>
+            <h6 class="u-text u-text-default u-text-12" style = "font-family: 'Noto Sans KR', sans-serif;">전기전도도</h6>
+            <h6 id = "u-text-6-elec" class="u-text u-text-default u-text-13" style = "font-family: 'Noto Sans KR', sans-serif;">
+            </h6>
+            <h6 id = "u-text-6-alk" class="u-text u-text-default u-text-14" style = "font-family: 'Noto Sans KR', sans-serif;"></h6>
+            <h6 class="u-text u-text-default u-text-15" style = "font-family: 'Noto Sans KR', sans-serif;">알칼리도</h6>
+          </div>
+        </div>
+        <h5 class="u-text u-text-default u-text-palette-1-light-2 u-text-16" style = "font-family: 'Do Hyeon', sans-serif;"> 데이터 현황</h5>
+        <h5 class="u-text u-text-default u-text-palette-1-light-2 u-text-17" style = "font-family: 'Do Hyeon', sans-serif;"> 실시간 탁도 예측</h5>
+        <div class="u-border-2 u-border-palette-1-light-1 u-container-style u-group u-group-6">
+          <div class="u-container-layout u-container-layout-6">
+            <a class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-font-lato u-hover-palette-5-dark-2 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-4" style= "font-family: 'Noto Sans KR', sans-serif; font-size : 1.4rem;" id = "u-btn-4-tur">
+            </a>
+            <div class="u-custom-color-6 u-preserve-proportions u-shape u-shape-circle u-shape-2">
+                <span id="alert-text"></span>
+            </div>
+            <p id = "u-text-18-fut-turb" class="u-text u-text-default u-text-18" style = "font-family: 'Noto Sans KR', sans-serif; font-size : 2.0rem;"></p>
+            <p class="u-text u-text-default u-text-30" style = "font-family: 'Noto Sans KR', sans-serif;">NTU</p>
+          </div>
+        </div>
+        <div class="u-border-2 u-border-palette-1-light-1 u-container-style u-group u-group-7">
+          <div class="u-container-layout u-container-layout-7">
+            <a href="#sec-49ae" id = "btn-alkality" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-dialog-link u-font-lato u-hover-palette-5-dark-2 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-5">알칼리도</a>
+            <div id="graph-container1" style="position: absolute; top: 60px; width: 100%; height:290px; display:none;">
+                <canvas id="myChart1" height = 120px;></canvas>
+            </div>
+            <a href="#sec-324b" id = "btn-turbidity" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-dialog-link u-font-lato u-hover-palette-5-dark-2 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-6"> 탁도</a>
+            <div id="graph-container2" style="position: absolute; top: 60px; width: 100%; height:290px; display:none;">
+                <canvas id="myChart2" height = 120px;></canvas>
+            </div>
+            <a href="#sec-6998" id = "btn-pH" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-dialog-link u-font-lato u-hover-palette-5-dark-2 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-7">pH</a>
+            <div id="graph-container3" style=" position: absolute; top: 60px; width: 100%; height :290px; display : None;">
+                <canvas id="myChart3" height = 120px;></canvas>
+            </div>
+            <a href="#sec-ef7c" id = "btn-elec" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-dialog-link u-font-lato u-hover-palette-5-dark-2 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-8">전기전도도</a>
+            <div id="graph-container4" style="position: absolute; top: 60px; width: 100%; height:290px; display : None;">
+                <canvas id="myChart4" height = 120px;></canvas>
+            </div>
+            <a href="#sec-6998" id = "btn-temp" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-dialog-link u-font-lato u-hover-palette-5-dark-2 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-9">수온</a>
+            <div id="graph-container5" style="position: absolute; top: 60px; width: 100%; height:290px; display : None;">
+                <canvas id="myChart5" height = 120px;></canvas>
+            </div>
+            <a href="#sec-7000" id = "btn-pacs" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-5 u-custom-font u-dialog-link u-font-lato u-hover-palette-5-dark-2 u-radius-3 u-text-body-alt-color u-text-hover-white u-btn-30">PACS 투입률</a>
+            <div id="graph-container6" style="position: absolute; top: 60px; width: 100%; height:290px; display : block;">
+                <canvas id="myChart6" height = 120px;></canvas>
+            </div>
+            <!--            <div class="u-border-2 u-border-palette-1-light-2 u-container-style u-group u-shape-rectangle u-group-8">-->
+            <div class="u-container-layout u-container-layout-8">
+              <script>
+              document.querySelectorAll('.u-graph-btn').forEach(function(button) {
+                 button.addEventListener('click', function() {
+                        // 모든 버튼의 active 클래스 제거
+                    document.querySelectorAll('.u-graph-btn').forEach(function(btn) {
+                        btn.classList.remove('active');
+                        });
+                        // 클릭된 버튼에 active 클래스 추가
+                        this.classList.add('active');
+                    });
+                });
+
+
+                document.getElementById('btn-alkality').addEventListener('click', function() {
+                    toggleGraph('graph-container1');
+                });
+                document.getElementById('btn-turbidity').addEventListener('click', function() {
+                    toggleGraph('graph-container2');
+                });
+                document.getElementById('btn-pH').addEventListener('click', function() {
+                    toggleGraph('graph-container3');
+                });
+                document.getElementById('btn-elec').addEventListener('click', function() {
+                    toggleGraph('graph-container4');
+                });
+                document.getElementById('btn-temp').addEventListener('click', function() {
+                    toggleGraph('graph-container5');
+                });
+                document.getElementById('btn-pacs').addEventListener('click', function() {
+                    toggleGraph('graph-container6');
+                });
+
+                function toggleGraph(graphId) {
+                  // List of all graph container ids
+                  var allGraphContainers = ['graph-container1', 'graph-container2', 'graph-container3', 'graph-container4', 'graph-container5', 'graph-container6'];
+
+                  allGraphContainers.forEach(function(containerId) {
+                      var container = document.getElementById(containerId);
+                      // Check if the current containerId is the one that should be displayed
+                      container.style.display = (containerId === graphId) ? 'block' : 'none';
+                  });
+              }
+              </script>
+            </div>
+        </div>
+
+      </div>
+          <p class = "u-text-model" id = "update-time" style = "font-family: 'Noto Sans KR', sans-serif;"></p>
+    </section>
+    <section class="u-align-left u-border-2 u-border-grey-75 u-clearfix u-color-scheme-summer-time u-image u-shading u-section-2" id="sec-7129" data-image-width="728" data-image-height="485">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-image u-image-contain u-image-default u-image-1" src="static/images/_-removebg-preview.png" alt="" data-image-width="547" data-image-height="456">
+        <a href="#sec-9fec" class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-1">&nbsp;취수탑&nbsp;</a>
+        <a href="#sec-f6a2" class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-2">&nbsp;착수정&nbsp;</a>
+        <a href="#sec-82f5" class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-3">약품투입실</a>
+        <a href="#sec-b236" class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-4">&nbsp;혼화지&nbsp;</a>
+        <a class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-5">&nbsp;응집지&nbsp;</a>
+        <a href="#sec-57b6" class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-6">&nbsp;침전지&nbsp;</a>
+        <a href="#sec-8ab4" class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-7">&nbsp;여과지&nbsp;</a>
+        <a href="#sec-5b94" class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-8">염소 투입실</a>
+        <a href="#sec-631c" class="u-border-none u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-9">&nbsp;정수지&nbsp;</a>
+        <a class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-10">송수펌프실</a>
+        <a class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-3-dark-2 u-palette-3-light-1 u-radius-50 u-btn-11">&nbsp;배수지&nbsp;</a>
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-5" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-6" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-7" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-8" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-9" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-10" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-11" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-12" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-13" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-14" src="static/images/stars-7626_256.gif" alt="" data-image-width="256" data-image-height="144">
+      </div>
+    </section>
+    <section>
+      <center style = "background-color: #3b4c5b"><img src = "static/images/kwater-logo.png"></center>
+    </section>
+
+<!--    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-f9e5" style = "background-color: #3b4c5b;"><div class="u-clearfix u-sheet u-sheet-1">-->
+<!--      <p class="u-small-text u-text u-text-variant u-text-1" style = "font-family: 'Do Hyeon', sans-serif; font-size : 2.0rem;">BigLeader Kwater-ACE <br>And K-WATER</p>-->
+<!--&lt;!&ndash;      <img src = "static/images/kwater-logo.png">&ndash;&gt;-->
+<!--      </div>-->
+<!--    </footer>-->
+  <section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-dialog-section-6" id="sec-9fec">
+      <div class="u-container-style u-custom-color-3 u-dialog u-radius-13 u-shape-round u-dialog-1">
+        <div class="u-container-layout u-container-layout-1"><span class="u-file-icon u-icon u-icon-1"><img src="static/images/9997725.png" alt=""></span>
+          <h2 class="u-text u-text-default u-text-1">원수 유입유량</h2>
+          <h5 class="u-align-center u-text u-text-2"  id = "u-text-2-water"></h5>
+          <a href="Homepage.html#sec-7129" class="u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-2-base u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">확인<br>
+          </a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-6 .u-dialog-1 {
+  width: 566px;
+  min-height: 428px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 81px auto 60px;
+}
+
+.u-dialog-section-6 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-6 .u-icon-1 {
+  height: 64px;
+  width: 64px;
+  margin: 38px auto 0;
+}
+
+.u-dialog-section-6 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px auto 0;
+}
+
+.u-dialog-section-6 .u-text-2 {
+  font-size: 3rem;
+  margin: 21px auto 0 0px;
+}
+
+.u-dialog-section-6 .u-text-3 {
+  font-size: 1.875rem;
+  margin: -48px 107px 0 299px;
+}
+
+.u-dialog-section-6 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 21px auto 0;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-6 .u-icon-2 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-6 .u-text-2 {
+    margin-left: 143px;
+  }
+
+  .u-dialog-section-6 .u-text-3 {
+    margin-top: -48px;
+    margin-right: 107px;
+    margin-left: 299px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-6 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-6 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-6 .u-container-layout-1 {
+    padding-top: 45px;
+  }
+
+  .u-dialog-section-6 .u-text-3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-6 .u-dialog-1 {
+    width: 340px;
+  }
+
+  .u-dialog-section-6 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-6 .u-text-1 {
+    font-size: 1.875rem;
+    margin-top: 29px;
+  }
+
+  .u-dialog-section-6 .u-text-2 {
+    margin-top: 68px;
+    margin-left: 88px;
+  }
+
+  .u-dialog-section-6 .u-text-3 {
+    margin-top: -106px;
+    margin-right: 98px;
+    margin-left: 199px;
+  }
+
+  .u-dialog-section-6 .u-btn-1 {
+    margin-top: 48px;
+  }
+}</style><section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-dialog-section-7" id="sec-f6a2">
+      <div class="u-container-style u-custom-color-3 u-dialog u-radius-13 u-shape-round u-dialog-1">
+        <div class="u-container-layout u-container-layout-1"><span class="u-file-icon u-icon u-icon-1"><img src="static/images/2226178.png" alt=""></span>
+          <h2 class="u-align-center u-text u-text-default u-text-1">수질 상태</h2>
+<!--          <p class="u-align-center u-text u-text-default u-text-2">탁도<span style="font-size: 1.5rem;"><br>수온<br>pH<br>알칼리도<br>전기전도도</span>-->
+
+          </p>
+          <p class="u-align-center u-custom-font u-font-pt-sans u-text u-text-3">
+<!--            <br>-->
+<!--            <br>-->
+<!--            <br>-->
+<!--            <br>-->
+          </p>
+          <p class="u-align-center u-text u-text-default u-text-4">
+            <p id="u-text2-3-turb" style="font-size: 1.5rem;"></p>
+            <p id="u-text2-3-pH" style="font-size: 1.5rem;"></p>
+            <p id="u-text2-3-temp" style="font-size: 1.5rem;"></p>
+            <p id="u-text2-3-alk" style="font-size: 1.5rem;"></p>
+            <p id="u-text2-3-elec" style="font-size: 1.5rem;"></p>
+          </p>
+          <a href="Homepage.html#sec-7129" class="u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-2-base u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">확인</a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-7 .u-dialog-1 {
+  width: 566px;
+  min-height: 513px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 43px auto 60px;
+}
+
+.u-dialog-section-7 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-7 .u-icon-1 {
+  height: 64px;
+  width: 64px;
+  margin: 10px auto 0;
+}
+
+.u-dialog-section-7 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px auto 0;
+}
+
+.u-dialog-section-7 .u-text-2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 2;
+  margin: 10px auto 0 126px;
+}
+
+.u-dialog-section-7 .u-text-3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: -200px 133px 0 211px;
+}
+
+.u-dialog-section-7 .u-text-4 {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-left: 300px;
+  margin-bottom: 200px;
+}
+
+.u-dialog-section-7 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 39px auto 0;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-7 .u-icon-2 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-7 .u-text-2 {
+    margin-left: 126px;
+  }
+
+  .u-dialog-section-7 .u-text-3 {
+    margin-top: -200px;
+    margin-right: 133px;
+    margin-left: 268px;
+  }
+
+  .u-dialog-section-7 .u-text-4 {
+    margin-top: -178px;
+    margin-left: 335px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-7 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-7 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-7 .u-container-layout-1 {
+    padding-top: 45px;
+  }
+
+  .u-dialog-section-7 .u-text-1 {
+    font-size: 2.25rem;
+  }
+
+  .u-dialog-section-7 .u-text-2 {
+    font-size: 1rem;
+    margin-left: 109px;
+  }
+
+  .u-dialog-section-7 .u-text-3 {
+    font-size: 1rem;
+    margin-left: 258px;
+  }
+
+  .u-dialog-section-7 .u-text-4 {
+    margin-left: 327px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-7 .u-dialog-1 {
+    width: 340px;
+  }
+
+  .u-dialog-section-7 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-7 .u-text-1 {
+    font-size: 1.875rem;
+  }
+
+  .u-dialog-section-7 .u-text-2 {
+    margin-left: 56px;
+  }
+
+  .u-dialog-section-7 .u-text-3 {
+    margin-right: 33px;
+    margin-left: 147px;
+  }
+
+  .u-dialog-section-7 .u-text-4 {
+    margin-left: 190px;
+  }
+}</style><section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-valign-middle u-dialog-section-8" id="sec-82f5">
+      <div class="u-container-style u-custom-color-3 u-dialog u-radius-13 u-shape-round u-dialog-1">
+        <div class="u-container-layout u-container-layout-1"><span class="u-file-icon u-icon u-icon-1"><img src="static/images/752563.png" alt=""></span>
+          <h2 class="u-text u-text-default u-text-1">PACS 투입률</h2>
+          <p class="u-align-center u-custom-font u-font-pt-sans u-text u-text-2" id = "u-text-2-2-pacs" style = "font-family: 'Noto Sans KR', sans-serif;"><span style = "font-size: 3rem;"></span>
+          </p>
+          <a href="Homepage.html#sec-7129" class="u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-2-base u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">확인<br>
+          </a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-8 .u-dialog-1 {
+  width: 566px;
+  min-height: 436px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 60px auto;
+}
+
+.u-dialog-section-8 .u-icon-1 {
+  height: 64px;
+  width: 64px;
+  margin: 42px auto 0;
+}
+
+.u-dialog-section-8 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px auto 0;
+}
+
+.u-dialog-section-8 .u-text-2 {
+  font-size: 1.875rem;
+  margin: 31px 163px 0;
+}
+
+.u-dialog-section-8 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 21px auto 0;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-8 .u-icon-2 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-8 .u-text-2 {
+    margin-right: 163px;
+    margin-left: 329px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-8 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-8 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-8 .u-container-layout-1 {
+    padding-top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-dialog-section-8 .u-text-1 {
+    font-size: 2.25rem;
+  }
+
+  .u-dialog-section-8 .u-text-2 {
+    font-size: 1rem;
+    margin-right: 150px;
+    margin-left: 316px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-8 .u-dialog-1 {
+    width: 340px;
+  }
+
+  .u-dialog-section-8 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-8 .u-text-1 {
+    font-size: 1.875rem;
+  }
+
+  .u-dialog-section-8 .u-text-2 {
+    margin-right: 50px;
+    margin-left: 216px;
+  }
+}</style><section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-dialog-section-9" id="sec-b236">
+      <div class="u-container-style u-custom-color-3 u-dialog u-radius-13 u-shape-round u-dialog-1">
+        <div class="u-container-layout u-valign-middle u-container-layout-1"><span class="u-file-icon u-icon u-icon-1"><img src="static/images/455397.png" alt=""></span>
+          <h2 class="u-text u-text-default u-text-1">혼화 현황</h2>
+          <h5 class="u-align-center u-text u-text-2">
+            <span style="font-size: 1.25rem;">혼화지 1</span> &nbsp; <span style="font-size: 3rem;">
+              <span style="font-size: 2.25rem;">200</span>&nbsp;<span style="font-size: 1.25rem;"> rpm ,&nbsp;&nbsp;<span style="font-size: 2.25rem;">15</span>분 경과
+              </span>
+            </span>
+            <br>
+          </h5>
+          <h5 class="u-align-center u-text u-text-3">
+            <span style="font-size: 1.25rem;">혼화지 2</span> &nbsp; <span style="font-size: 3rem;">
+              <span style="font-size: 2.25rem;">30</span>&nbsp;<span style="font-size: 1.25rem;"> rpm</span>
+            </span> ,&nbsp;&nbsp;<span style="font-size: 2.25rem;">7&nbsp;</span>
+            <span style="font-size: 1.25rem;">분 경과</span>
+            <br>
+          </h5>
+          <a href="Homepage.html#sec-7129" class="u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-2-base u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">확인<br>
+          </a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-9 .u-dialog-1 {
+  width: 566px;
+  min-height: 401px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 88px auto 60px;
+}
+
+.u-dialog-section-9 .u-container-layout-1 {
+  padding: 0 30px;
+}
+
+.u-dialog-section-9 .u-icon-1 {
+  height: 64px;
+  width: 64px;
+  margin: 0 221px 0 auto;
+}
+
+.u-dialog-section-9 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px auto 0 163px;
+}
+
+.u-dialog-section-9 .u-text-2 {
+  font-size: 1.875rem;
+}
+
+.u-dialog-section-9 .u-text-3 {
+  font-size: 1.875rem;
+}
+
+.u-dialog-section-9 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 20px auto 0 191px;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-9 .u-icon-2 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-9 .u-text-1 {
+    margin-left: 163px;
+  }
+
+  .u-dialog-section-9 .u-text-2 {
+    margin-right: 49px;
+    margin-left: 79px;
+  }
+
+  .u-dialog-section-9 .u-text-3 {
+    width: 348px;
+    margin-left: 79px;
+    margin-right: 49px;
+  }
+
+  .u-dialog-section-9 .u-btn-1 {
+    margin-left: 191px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-9 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-9 .u-container-layout-1 {
+    padding-top: 45px;
+  }
+
+  .u-dialog-section-9 .u-icon-1 {
+    margin-right: 227px;
+  }
+
+  .u-dialog-section-9 .u-text-1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-9 .u-dialog-1 {
+    width: 340px;
+  }
+
+  .u-dialog-section-9 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-9 .u-icon-1 {
+    margin-right: 140px;
+    margin-left: 101px;
+  }
+
+  .u-dialog-section-9 .u-text-1 {
+    font-size: 1.875rem;
+    margin-left: 33px;
+  }
+
+  .u-dialog-section-9 .u-text-2 {
+    margin-top: -42px;
+    margin-right: 0;
+  }
+
+  .u-dialog-section-9 .u-text-3 {
+    margin-top: -67px;
+    margin-right: 0;
+    margin-left: 0;
+    width: 320px;
+  }
+
+  .u-dialog-section-9 .u-btn-1 {
+    margin-top: 0;
+    margin-left: 71px;
+  }
+}</style><section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-valign-middle u-dialog-section-10" id="sec-57b6">
+      <div class="u-container-style u-custom-color-3 u-dialog u-radius-13 u-shape-round u-dialog-1">
+        <div class="u-container-layout u-container-layout-1"><span class="u-file-icon u-icon u-icon-1"><img src="static/images/1861886.png" alt=""></span>
+          <h2 class="u-align-center u-text u-text-default u-text-1">침전수</h2>
+          <p class="u-align-center u-text u-text-2">
+            <span style="font-size: 1.25rem;">침전수 탁도&nbsp;&nbsp;</span>&nbsp;<span style="font-size: 2.25rem;"> 0.1&nbsp;<span style="font-size: 1.25rem;"> ntu</span>
+            </span>
+          </p>
+          <a href="Homepage.html#sec-7129" class="u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-2-base u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">확인</a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-10 .u-dialog-1 {
+  width: 566px;
+  min-height: 436px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 60px auto;
+}
+
+.u-dialog-section-10 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-10 .u-icon-1 {
+  height: 64px;
+  width: 64px;
+  margin: 23px auto 0;
+}
+
+.u-dialog-section-10 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px auto 0;
+}
+
+.u-dialog-section-10 .u-text-2 {
+  margin: 29px auto 0;
+}
+
+.u-dialog-section-10 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 37px auto 0 198px;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-10 .u-icon-2 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-10 .u-btn-1 {
+    margin-left: 198px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-10 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-10 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-10 .u-container-layout-1 {
+    padding-top: 45px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-10 .u-dialog-1 {
+    width: 340px;
+    min-height: 404px;
+  }
+
+  .u-dialog-section-10 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-10 .u-text-1 {
+    font-size: 1.875rem;
+    margin-top: 29px;
+  }
+
+  .u-dialog-section-10 .u-text-2 {
+    margin-left: 59px;
+  }
+
+  .u-dialog-section-10 .u-btn-1 {
+    margin-left: 20px;
+  }
+}</style><section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-valign-middle u-dialog-section-11" id="sec-8ab4">
+      <div class="u-container-style u-custom-color-3 u-dialog u-radius-13 u-shape-round u-dialog-1">
+        <div class="u-container-layout u-container-layout-1"><span class="u-file-icon u-icon u-icon-1"><img src="static/images/12041833.png" alt=""></span>
+          <h2 class="u-text u-text-default u-text-1">여과지</h2>
+          <p class="u-align-center u-text u-text-2">여과수 탁도&nbsp; <span style="font-size: 2.25rem;">0.01</span> ntu
+          </p>
+          <a href="Homepage.html#sec-7129" class="u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-2-base u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">확인</a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-11 .u-dialog-1 {
+  width: 566px;
+  min-height: 436px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 60px auto;
+}
+
+.u-dialog-section-11 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-11 .u-icon-1 {
+  height: 64px;
+  width: 64px;
+  margin: 43px auto 0;
+}
+
+.u-dialog-section-11 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px auto 0;
+}
+
+.u-dialog-section-11 .u-text-2 {
+  font-size: 1.25rem;
+  margin: 0 auto;
+}
+
+.u-dialog-section-11 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 40px auto 0;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-11 .u-icon-2 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-11 .u-text-2 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-11 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-11 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-11 .u-container-layout-1 {
+    padding-top: 45px;
+  }
+
+  .u-dialog-section-11 .u-icon-1 {
+    margin-left: 245px;
+  }
+
+  .u-dialog-section-11 .u-text-1 {
+    margin-left: 213px;
+  }
+
+  .u-dialog-section-11 .u-text-2 {
+    font-size: 1rem;
+    margin-left: 141px;
+  }
+
+  .u-dialog-section-11 .u-btn-1 {
+    margin-left: 207px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-11 .u-dialog-1 {
+    width: 340px;
+    min-height: 404px;
+  }
+
+  .u-dialog-section-11 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-11 .u-icon-1 {
+    margin-left: auto;
+  }
+
+  .u-dialog-section-11 .u-text-1 {
+    font-size: 1.875rem;
+    margin-top: 29px;
+    margin-left: auto;
+  }
+
+  .u-dialog-section-11 .u-text-2 {
+    margin-left: 94px;
+  }
+
+
+  .u-dialog-section-11 .u-btn-1 {
+    margin-left: auto;
+  }
+}</style><section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-valign-middle u-dialog-section-12" id="sec-5b94">
+      <div class="u-container-style u-custom-color-3 u-dialog u-radius-13 u-shape-round u-dialog-1">
+        <div class="u-container-layout u-container-layout-1"><span class="u-file-icon u-icon u-icon-1"><img src="static/images/782769.png" alt=""></span>
+          <h2 class="u-align-center u-text u-text-default u-text-1">차염 주입</h2>
+          <p class="u-align-center u-text u-text-2">염소 주입량&nbsp; &nbsp;<span style="font-size: 2.25rem;">10</span> ppm
+          </p>
+          <a href="Homepage.html#sec-7129" class="u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-2-base u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">확인</a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-12 .u-dialog-1 {
+  width: 566px;
+  min-height: 436px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 60px auto;
+}
+
+.u-dialog-section-12 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-12 .u-icon-1 {
+  height: 64px;
+  width: 64px;
+  margin: 23px auto 0;
+}
+
+.u-dialog-section-12 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px auto 0;
+}
+
+.u-dialog-section-12 .u-text-2 {
+  font-size: 1.25rem;
+  margin: 35px auto 0 0px;
+}
+
+.u-dialog-section-12 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 34px auto 0;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-12 .u-icon-2 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-12 .u-text-2 {
+    margin-left: 139px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-12 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-12 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-12 .u-container-layout-1 {
+    padding-top: 45px;
+  }
+
+  .u-dialog-section-12 .u-text-2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-12 .u-dialog-1 {
+    width: 340px;
+    min-height: 404px;
+  }
+
+  .u-dialog-section-12 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-12 .u-text-1 {
+    font-size: 1.875rem;
+    margin-top: 29px;
+  }
+
+  .u-dialog-section-12 .u-text-2 {
+    margin-left: 86px;
+  }
+}</style><section class="u-align-center u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-valign-middle u-dialog-section-13" id="sec-631c">
+      <div class="u-container-style u-custom-color-3 u-dialog u-radius-13 u-shape-round u-dialog-1">
+        <div class="u-container-layout u-container-layout-1"><span class="u-file-icon u-icon u-icon-1"><img src="static/images/5882900.png" alt=""></span>
+          <h2 class="u-align-center u-text u-text-default u-text-1">정수지</h2>
+          <p class="u-align-center u-text u-text-2">정수지 탁도&nbsp; &nbsp;<span style="font-size: 2.25rem;">0.02</span> ntu
+          </p>
+          <a href="Homepage.html#sec-7129" class="u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-2-base u-radius-50 u-text-body-alt-color u-text-hover-white u-btn-1">확인</a>
+        </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style=""><use xlink:href="#svg-5801"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-5801"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"></path></svg></button>
+      </div>
+    </section><style>.u-dialog-section-13 .u-dialog-1 {
+  width: 566px;
+  min-height: 436px;
+  height: auto;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+  margin: 60px auto;
+}
+
+.u-dialog-section-13 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-13 .u-icon-1 {
+  height: 64px;
+  width: 64px;
+  margin: 23px auto 0;
+}
+
+.u-dialog-section-13 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px auto 0;
+}
+
+.u-dialog-section-13 .u-text-2 {
+  font-size: 1.25rem;
+  margin: 20px auto 0;
+}
+
+.u-dialog-section-13 .u-btn-1 {
+  border-style: none;
+  font-size: 1rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 21px auto 0;
+  padding: 9px 47px 10px 46px;
+}
+
+.u-dialog-section-13 .u-icon-2 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-13 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-13 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-13 .u-container-layout-1 {
+    padding-top: 45px;
+  }
+
+  .u-dialog-section-13 .u-text-2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-13 .u-dialog-1 {
+    width: 340px;
+    min-height: 404px;
+  }
+
+  .u-dialog-section-13 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-13 .u-text-1 {
+    font-size: 1.875rem;
+    margin-top: 29px;
+  }
+}</style>
+</body></html>

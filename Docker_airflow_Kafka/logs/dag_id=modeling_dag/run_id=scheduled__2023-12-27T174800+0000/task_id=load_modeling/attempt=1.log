@@ -1,0 +1,22 @@
+[2023-12-27T17:49:02.802+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: modeling_dag.load_modeling scheduled__2023-12-27T17:48:00+00:00 [queued]>
+[2023-12-27T17:49:02.809+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: modeling_dag.load_modeling scheduled__2023-12-27T17:48:00+00:00 [queued]>
+[2023-12-27T17:49:02.809+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-27T17:49:02.820+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_modeling> on 2023-12-27 17:48:00+00:00
+[2023-12-27T17:49:02.826+0000] {standard_task_runner.py:57} INFO - Started process 3716 to run task
+[2023-12-27T17:49:02.828+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'modeling_dag', 'load_modeling', 'scheduled__2023-12-27T17:48:00+00:00', '--job-id', '676', '--raw', '--subdir', 'DAGS_FOLDER/modeling.py', '--cfg-path', '/tmp/tmpw3zhidk0']
+[2023-12-27T17:49:02.831+0000] {standard_task_runner.py:85} INFO - Job 676: Subtask load_modeling
+[2023-12-27T17:49:02.862+0000] {task_command.py:410} INFO - Running <TaskInstance: modeling_dag.load_modeling scheduled__2023-12-27T17:48:00+00:00 [running]> on host c56b1de7f6cf
+[2023-12-27T17:49:02.925+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='modeling_dag' AIRFLOW_CTX_TASK_ID='load_modeling' AIRFLOW_CTX_EXECUTION_DATE='2023-12-27T17:48:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-27T17:48:00+00:00'
+[2023-12-27T17:49:10.535+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/base.py:451: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  "X does not have valid feature names, but"
+
+[2023-12-27T17:49:10.560+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/base.py:451: UserWarning: X does not have valid feature names, but ExtraTreesClassifier was fitted with feature names
+  "X does not have valid feature names, but"
+
+[2023-12-27T17:49:10.696+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/base.py:451: UserWarning: X does not have valid feature names, but ExtraTreesRegressor was fitted with feature names
+  "X does not have valid feature names, but"
+
+[2023-12-27T17:49:10.703+0000] {python.py:183} INFO - Done. Returned value was: (array([20.83403872]), array([0]))
+[2023-12-27T17:49:10.723+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=modeling_dag, task_id=load_modeling, execution_date=20231227T174800, start_date=20231227T174902, end_date=20231227T174910
+[2023-12-27T17:49:10.789+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-12-27T17:49:10.806+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

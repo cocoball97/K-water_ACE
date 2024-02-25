@@ -1,0 +1,56 @@
+[2023-12-20T05:52:16.123+0000] {processor.py:157} INFO - Started process (PID=31) to work on /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:52:16.124+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(.py for tasks to queue
+[2023-12-20T05:52:16.124+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:16.124+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:52:19.607+0000] {processor.py:836} INFO - DAG(s) dict_keys(['casasombined_dag22222']) retrieved from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:52:19.712+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.712+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:casasombined_dag22222
+[2023-12-20T05:52:19.723+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.723+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:casasombined_dag22222
+[2023-12-20T05:52:19.729+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.729+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:casasombined_dag22222
+[2023-12-20T05:52:19.742+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.742+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:52:19.752+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.752+0000] {dag.py:2763} INFO - Creating ORM DAG for casasombined_dag22222
+[2023-12-20T05:52:19.763+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.763+0000] {dag.py:3508} INFO - Setting next_dagrun for casasombined_dag22222 to 2023-12-20T05:51:00+00:00, run_after=2023-12-20T05:52:00+00:00
+[2023-12-20T05:52:19.785+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(.py took 3.664 seconds
+[2023-12-20T05:52:50.284+0000] {processor.py:157} INFO - Started process (PID=188) to work on /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:52:50.286+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(.py for tasks to queue
+[2023-12-20T05:52:50.287+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:50.287+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:52:51.826+0000] {processor.py:836} INFO - DAG(s) dict_keys(['casasombined_dag22222']) retrieved from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:52:51.844+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:51.844+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:52:51.861+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:51.861+0000] {dag.py:3508} INFO - Setting next_dagrun for casasombined_dag22222 to 2023-12-20T05:51:00+00:00, run_after=2023-12-20T05:52:00+00:00
+[2023-12-20T05:52:51.874+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(.py took 1.592 seconds
+[2023-12-20T05:53:21.924+0000] {processor.py:157} INFO - Started process (PID=301) to work on /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:53:21.925+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(.py for tasks to queue
+[2023-12-20T05:53:21.925+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:21.925+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:53:23.493+0000] {processor.py:836} INFO - DAG(s) dict_keys(['casasombined_dag22222']) retrieved from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:53:23.514+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:23.513+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:53:23.533+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:23.533+0000] {dag.py:3508} INFO - Setting next_dagrun for casasombined_dag22222 to 2023-12-20T05:52:00+00:00, run_after=2023-12-20T05:53:00+00:00
+[2023-12-20T05:53:23.547+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(.py took 1.625 seconds
+[2023-12-20T05:53:53.844+0000] {processor.py:157} INFO - Started process (PID=414) to work on /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:53:53.845+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(.py for tasks to queue
+[2023-12-20T05:53:53.846+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:53.845+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:53:55.507+0000] {processor.py:836} INFO - DAG(s) dict_keys(['casasombined_dag22222']) retrieved from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:53:55.525+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:55.525+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:53:55.543+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:55.543+0000] {dag.py:3508} INFO - Setting next_dagrun for casasombined_dag22222 to 2023-12-20T05:52:00+00:00, run_after=2023-12-20T05:53:00+00:00
+[2023-12-20T05:53:55.558+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(.py took 1.716 seconds
+[2023-12-20T05:54:25.837+0000] {processor.py:157} INFO - Started process (PID=519) to work on /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:54:25.839+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(.py for tasks to queue
+[2023-12-20T05:54:25.840+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:25.840+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:54:27.517+0000] {processor.py:836} INFO - DAG(s) dict_keys(['casasombined_dag22222']) retrieved from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:54:27.537+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:27.537+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:54:27.557+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:27.556+0000] {dag.py:3508} INFO - Setting next_dagrun for casasombined_dag22222 to 2023-12-20T05:53:00+00:00, run_after=2023-12-20T05:54:00+00:00
+[2023-12-20T05:54:27.571+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(.py took 1.737 seconds
+[2023-12-20T05:54:58.128+0000] {processor.py:157} INFO - Started process (PID=632) to work on /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:54:58.130+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(.py for tasks to queue
+[2023-12-20T05:54:58.131+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:58.130+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:54:59.705+0000] {processor.py:836} INFO - DAG(s) dict_keys(['casasombined_dag22222']) retrieved from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:54:59.725+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:59.724+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:54:59.742+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:59.741+0000] {dag.py:3508} INFO - Setting next_dagrun for casasombined_dag22222 to 2023-12-20T05:53:00+00:00, run_after=2023-12-20T05:54:00+00:00
+[2023-12-20T05:54:59.755+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(.py took 1.631 seconds
+[2023-12-20T05:55:30.244+0000] {processor.py:157} INFO - Started process (PID=746) to work on /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:55:30.246+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(.py for tasks to queue
+[2023-12-20T05:55:30.246+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:30.246+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:55:31.851+0000] {processor.py:836} INFO - DAG(s) dict_keys(['casasombined_dag22222']) retrieved from /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:55:31.869+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:31.869+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:55:31.887+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:31.887+0000] {dag.py:3508} INFO - Setting next_dagrun for casasombined_dag22222 to 2023-12-20T05:54:00+00:00, run_after=2023-12-20T05:55:00+00:00
+[2023-12-20T05:55:31.901+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/combined_dag(.py took 1.659 seconds
+[2023-12-20T05:56:02.100+0000] {processor.py:157} INFO - Started process (PID=859) to work on /opt/airflow/dags/combined_dag(.py
+[2023-12-20T05:56:02.103+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/combined_dag(.py for tasks to queue
+[2023-12-20T05:56:02.104+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:02.103+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/combined_dag(.py

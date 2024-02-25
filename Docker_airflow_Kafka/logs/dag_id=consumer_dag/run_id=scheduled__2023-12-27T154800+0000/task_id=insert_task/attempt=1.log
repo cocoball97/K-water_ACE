@@ -1,0 +1,22 @@
+[2023-12-27T15:49:34.676+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_dag.insert_task scheduled__2023-12-27T15:48:00+00:00 [queued]>
+[2023-12-27T15:49:34.682+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_dag.insert_task scheduled__2023-12-27T15:48:00+00:00 [queued]>
+[2023-12-27T15:49:34.682+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-27T15:49:34.692+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): insert_task> on 2023-12-27 15:48:00+00:00
+[2023-12-27T15:49:34.695+0000] {standard_task_runner.py:57} INFO - Started process 109 to run task
+[2023-12-27T15:49:34.697+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'consumer_dag', 'insert_task', 'scheduled__2023-12-27T15:48:00+00:00', '--job-id', '344', '--raw', '--subdir', 'DAGS_FOLDER/consumer.py', '--cfg-path', '/tmp/tmpt5jcwf0o']
+[2023-12-27T15:49:34.698+0000] {standard_task_runner.py:85} INFO - Job 344: Subtask insert_task
+[2023-12-27T15:49:34.725+0000] {task_command.py:410} INFO - Running <TaskInstance: consumer_dag.insert_task scheduled__2023-12-27T15:48:00+00:00 [running]> on host c56b1de7f6cf
+[2023-12-27T15:49:34.776+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='consumer_dag' AIRFLOW_CTX_TASK_ID='insert_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-27T15:48:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-27T15:48:00+00:00'
+[2023-12-27T15:49:34.783+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/consumer.py", line 46, in insert_to_db
+    new_data = ti.xcom_pull(task_ids='consume_task')[0]
+TypeError: 'NoneType' object is not subscriptable
+[2023-12-27T15:49:34.789+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=consumer_dag, task_id=insert_task, execution_date=20231227T154800, start_date=20231227T154934, end_date=20231227T154934
+[2023-12-27T15:49:34.797+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 344 for task insert_task ('NoneType' object is not subscriptable; 109)
+[2023-12-27T15:49:34.829+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-12-27T15:49:34.840+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

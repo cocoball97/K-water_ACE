@@ -1,0 +1,16 @@
+[2023-12-23T16:16:01.295+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer_dag.consume_task manual__2023-12-23T16:16:00.738982+00:00 [queued]>
+[2023-12-23T16:16:01.302+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer_dag.consume_task manual__2023-12-23T16:16:00.738982+00:00 [queued]>
+[2023-12-23T16:16:01.303+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-23T16:16:01.312+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): consume_task> on 2023-12-23 16:16:00.738982+00:00
+[2023-12-23T16:16:01.316+0000] {standard_task_runner.py:57} INFO - Started process 1190 to run task
+[2023-12-23T16:16:01.318+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'consumer_dag', 'consume_task', 'manual__2023-12-23T16:16:00.738982+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/consumer.py', '--cfg-path', '/tmp/tmpfqrq3dh2']
+[2023-12-23T16:16:01.319+0000] {standard_task_runner.py:85} INFO - Job 24: Subtask consume_task
+[2023-12-23T16:16:01.351+0000] {task_command.py:410} INFO - Running <TaskInstance: consumer_dag.consume_task manual__2023-12-23T16:16:00.738982+00:00 [running]> on host f21c60d604df
+[2023-12-23T16:16:01.412+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='consumer_dag' AIRFLOW_CTX_TASK_ID='consume_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-23T16:16:00.738982+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-23T16:16:00.738982+00:00'
+[2023-12-23T16:16:01.415+0000] {logging_mixin.py:150} INFO - 상혁4
+[2023-12-23T16:16:11.419+0000] {logging_mixin.py:150} INFO - 타입입니당 <class 'NoneType'>
+[2023-12-23T16:16:11.419+0000] {logging_mixin.py:150} INFO - 상혁6
+[2023-12-23T16:16:18.528+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-12-23T16:16:18.541+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=consumer_dag, task_id=consume_task, execution_date=20231223T161600, start_date=20231223T161601, end_date=20231223T161618
+[2023-12-23T16:16:18.616+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-12-23T16:16:18.629+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

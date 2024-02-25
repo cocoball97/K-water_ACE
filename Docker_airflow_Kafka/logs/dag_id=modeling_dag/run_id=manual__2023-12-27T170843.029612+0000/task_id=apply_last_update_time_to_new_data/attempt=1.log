@@ -1,0 +1,22 @@
+[2023-12-27T17:08:51.507+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: modeling_dag.apply_last_update_time_to_new_data manual__2023-12-27T17:08:43.029612+00:00 [queued]>
+[2023-12-27T17:08:51.513+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: modeling_dag.apply_last_update_time_to_new_data manual__2023-12-27T17:08:43.029612+00:00 [queued]>
+[2023-12-27T17:08:51.513+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-27T17:08:51.524+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): apply_last_update_time_to_new_data> on 2023-12-27 17:08:43.029612+00:00
+[2023-12-27T17:08:51.530+0000] {standard_task_runner.py:57} INFO - Started process 6079 to run task
+[2023-12-27T17:08:51.532+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'modeling_dag', 'apply_last_update_time_to_new_data', 'manual__2023-12-27T17:08:43.029612+00:00', '--job-id', '482', '--raw', '--subdir', 'DAGS_FOLDER/modeling.py', '--cfg-path', '/tmp/tmpbxh3j0mo']
+[2023-12-27T17:08:51.535+0000] {standard_task_runner.py:85} INFO - Job 482: Subtask apply_last_update_time_to_new_data
+[2023-12-27T17:08:51.565+0000] {task_command.py:410} INFO - Running <TaskInstance: modeling_dag.apply_last_update_time_to_new_data manual__2023-12-27T17:08:43.029612+00:00 [running]> on host c56b1de7f6cf
+[2023-12-27T17:08:51.615+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='modeling_dag' AIRFLOW_CTX_TASK_ID='apply_last_update_time_to_new_data' AIRFLOW_CTX_EXECUTION_DATE='2023-12-27T17:08:43.029612+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-27T17:08:43.029612+00:00'
+[2023-12-27T17:08:51.655+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/modeling.py", line 137, in replace_missing_update_time
+    prev_value = cursor.fetchone()[0]
+TypeError: 'NoneType' object is not subscriptable
+[2023-12-27T17:08:51.661+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=modeling_dag, task_id=apply_last_update_time_to_new_data, execution_date=20231227T170843, start_date=20231227T170851, end_date=20231227T170851
+[2023-12-27T17:08:51.669+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 482 for task apply_last_update_time_to_new_data ('NoneType' object is not subscriptable; 6079)
+[2023-12-27T17:08:51.704+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-12-27T17:08:51.716+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2023-10-20T13:57:18.576+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_dag.generate_random_data_task manual__2023-10-20T13:57:15.872157+00:00 [queued]>
+[2023-10-20T13:57:18.582+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_dag.generate_random_data_task manual__2023-10-20T13:57:15.872157+00:00 [queued]>
+[2023-10-20T13:57:18.582+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-10-20T13:57:18.592+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): generate_random_data_task> on 2023-10-20 13:57:15.872157+00:00
+[2023-10-20T13:57:18.598+0000] {standard_task_runner.py:57} INFO - Started process 1325 to run task
+[2023-10-20T13:57:18.601+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'test_dag', 'generate_random_data_task', 'manual__2023-10-20T13:57:15.872157+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp7s2e4mng']
+[2023-10-20T13:57:18.601+0000] {standard_task_runner.py:85} INFO - Job 103: Subtask generate_random_data_task
+[2023-10-20T13:57:18.632+0000] {task_command.py:410} INFO - Running <TaskInstance: test_dag.generate_random_data_task manual__2023-10-20T13:57:15.872157+00:00 [running]> on host 9e1824266991
+[2023-10-20T13:57:18.681+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='test_dag' AIRFLOW_CTX_TASK_ID='generate_random_data_task' AIRFLOW_CTX_EXECUTION_DATE='2023-10-20T13:57:15.872157+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-20T13:57:15.872157+00:00'
+[2023-10-20T13:57:18.689+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/test.py", line 25, in generate_random_data
+    password="12345678"
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "192.168.22.241", port 5432 failed: FATAL:  role "postgres" does not exist
+
+[2023-10-20T13:57:18.694+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=test_dag, task_id=generate_random_data_task, execution_date=20231020T135715, start_date=20231020T135718, end_date=20231020T135718
+[2023-10-20T13:57:18.703+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 103 for task generate_random_data_task (connection to server at "192.168.22.241", port 5432 failed: FATAL:  role "postgres" does not exist
+; 1325)
+[2023-10-20T13:57:18.732+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-10-20T13:57:18.744+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

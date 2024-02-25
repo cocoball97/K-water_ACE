@@ -1,0 +1,20 @@
+[2023-12-24T01:17:51.967+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: producer_dag.check_task manual__2023-12-24T01:17:47.185640+00:00 [queued]>
+[2023-12-24T01:17:51.975+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: producer_dag.check_task manual__2023-12-24T01:17:47.185640+00:00 [queued]>
+[2023-12-24T01:17:51.975+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-24T01:17:51.988+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): check_task> on 2023-12-24 01:17:47.185640+00:00
+[2023-12-24T01:17:51.994+0000] {standard_task_runner.py:57} INFO - Started process 1988 to run task
+[2023-12-24T01:17:51.997+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'producer_dag', 'check_task', 'manual__2023-12-24T01:17:47.185640+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/producer.py', '--cfg-path', '/tmp/tmppb8egbd5']
+[2023-12-24T01:17:51.999+0000] {standard_task_runner.py:85} INFO - Job 38: Subtask check_task
+[2023-12-24T01:17:52.037+0000] {task_command.py:410} INFO - Running <TaskInstance: producer_dag.check_task manual__2023-12-24T01:17:47.185640+00:00 [running]> on host 6206428d3fd4
+[2023-12-24T01:17:52.116+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='producer_dag' AIRFLOW_CTX_TASK_ID='check_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-24T01:17:47.185640+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-24T01:17:47.185640+00:00'
+[2023-12-24T01:17:52.117+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: check_and_print_kafka_topic_exists() missing 2 required positional arguments: 'kafka_conf' and 'kafka_topic'
+[2023-12-24T01:17:52.123+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=producer_dag, task_id=check_task, execution_date=20231224T011747, start_date=20231224T011751, end_date=20231224T011752
+[2023-12-24T01:17:52.132+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 38 for task check_task (check_and_print_kafka_topic_exists() missing 2 required positional arguments: 'kafka_conf' and 'kafka_topic'; 1988)
+[2023-12-24T01:17:52.168+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-12-24T01:17:52.181+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

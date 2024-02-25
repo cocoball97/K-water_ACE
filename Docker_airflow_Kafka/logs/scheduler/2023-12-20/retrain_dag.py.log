@@ -1,0 +1,109 @@
+[2023-12-20T05:52:17.802+0000] {processor.py:157} INFO - Started process (PID=74) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:52:17.802+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:52:17.803+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:17.803+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:52:19.270+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:52:19.349+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.349+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:retrain_dag
+[2023-12-20T05:52:19.358+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.357+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:retrain_dag
+[2023-12-20T05:52:19.363+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.362+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:retrain_dag
+[2023-12-20T05:52:19.374+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.374+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:52:19.383+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.383+0000] {dag.py:2763} INFO - Creating ORM DAG for retrain_dag
+[2023-12-20T05:52:19.396+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:19.396+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:50:00+00:00, run_after=2023-12-20T05:52:00+00:00
+[2023-12-20T05:52:19.419+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 1.620 seconds
+[2023-12-20T05:52:49.731+0000] {processor.py:157} INFO - Started process (PID=167) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:52:49.743+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:52:49.744+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:49.743+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:52:50.561+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:52:50.577+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:50.577+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:52:50.595+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:52:50.594+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:50:00+00:00, run_after=2023-12-20T05:52:00+00:00
+[2023-12-20T05:52:50.610+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.882 seconds
+[2023-12-20T05:53:21.118+0000] {processor.py:157} INFO - Started process (PID=280) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:53:21.120+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:53:21.121+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:21.120+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:53:21.864+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:53:21.877+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:21.877+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:53:21.893+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:21.893+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:50:00+00:00, run_after=2023-12-20T05:52:00+00:00
+[2023-12-20T05:53:21.906+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.791 seconds
+[2023-12-20T05:53:52.320+0000] {processor.py:157} INFO - Started process (PID=393) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:53:52.340+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:53:52.341+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:52.341+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:53:53.165+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:53:53.181+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:53.181+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:53:53.201+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:53:53.201+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:50:00+00:00, run_after=2023-12-20T05:52:00+00:00
+[2023-12-20T05:53:53.221+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.904 seconds
+[2023-12-20T05:54:23.368+0000] {processor.py:157} INFO - Started process (PID=498) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:54:23.369+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:54:23.370+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:23.370+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:54:24.115+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:54:24.134+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:24.134+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:54:24.158+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:24.157+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:52:00+00:00, run_after=2023-12-20T05:54:00+00:00
+[2023-12-20T05:54:24.170+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.804 seconds
+[2023-12-20T05:54:54.577+0000] {processor.py:157} INFO - Started process (PID=611) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:54:54.578+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:54:54.579+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:54.579+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:54:55.315+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:54:55.328+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:55.328+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:54:55.344+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:54:55.344+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:52:00+00:00, run_after=2023-12-20T05:54:00+00:00
+[2023-12-20T05:54:55.361+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.785 seconds
+[2023-12-20T05:55:25.611+0000] {processor.py:157} INFO - Started process (PID=725) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:55:25.613+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:55:25.614+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:25.614+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:55:26.395+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:55:26.409+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:26.409+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:55:26.429+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:26.429+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:52:00+00:00, run_after=2023-12-20T05:54:00+00:00
+[2023-12-20T05:55:26.444+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.834 seconds
+[2023-12-20T05:55:56.542+0000] {processor.py:157} INFO - Started process (PID=829) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:55:56.542+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:55:56.543+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:56.543+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:55:57.294+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:55:57.309+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:57.308+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:55:57.324+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:55:57.324+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:52:00+00:00, run_after=2023-12-20T05:54:00+00:00
+[2023-12-20T05:55:57.337+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.798 seconds
+[2023-12-20T05:56:05.517+0000] {processor.py:157} INFO - Started process (PID=904) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:56:05.518+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:56:05.519+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:05.518+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:56:06.413+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:56:06.430+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:06.429+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:56:06.447+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:06.447+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:54:00+00:00, run_after=2023-12-20T05:56:00+00:00
+[2023-12-20T05:56:06.462+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.947 seconds
+[2023-12-20T05:56:36.629+0000] {processor.py:157} INFO - Started process (PID=996) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:56:36.630+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:56:36.630+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:36.630+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:56:37.400+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:56:37.414+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:37.414+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:56:37.429+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:56:37.429+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:54:00+00:00, run_after=2023-12-20T05:56:00+00:00
+[2023-12-20T05:56:37.441+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.814 seconds
+[2023-12-20T05:57:07.875+0000] {processor.py:157} INFO - Started process (PID=1088) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:57:07.876+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:57:07.877+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:07.877+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:57:08.786+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:57:08.808+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:08.807+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:57:08.827+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:08.826+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:54:00+00:00, run_after=2023-12-20T05:56:00+00:00
+[2023-12-20T05:57:08.844+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.971 seconds
+[2023-12-20T05:57:39.075+0000] {processor.py:157} INFO - Started process (PID=1171) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:57:39.077+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:57:39.077+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:39.077+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:57:39.886+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:57:39.903+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:39.903+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:57:39.920+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:57:39.920+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:54:00+00:00, run_after=2023-12-20T05:56:00+00:00
+[2023-12-20T05:57:40.005+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.933 seconds
+[2023-12-20T05:58:50.653+0000] {processor.py:157} INFO - Started process (PID=54) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:58:50.654+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:58:50.655+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:58:50.655+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:58:51.703+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:58:51.788+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:58:51.788+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:58:51.808+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:58:51.808+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:56:00+00:00, run_after=2023-12-20T05:58:00+00:00
+[2023-12-20T05:58:51.825+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 1.175 seconds
+[2023-12-20T05:59:22.168+0000] {processor.py:157} INFO - Started process (PID=149) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:59:22.169+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:59:22.170+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:22.170+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:59:23.067+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:59:23.083+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:23.083+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:59:23.100+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:23.100+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:56:00+00:00, run_after=2023-12-20T05:58:00+00:00
+[2023-12-20T05:59:23.113+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.949 seconds
+[2023-12-20T05:59:53.180+0000] {processor.py:157} INFO - Started process (PID=234) to work on /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:59:53.181+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2023-12-20T05:59:53.181+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:53.181+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:59:54.025+0000] {processor.py:836} INFO - DAG(s) dict_keys(['retrain_dag']) retrieved from /opt/airflow/dags/retrain_dag.py
+[2023-12-20T05:59:54.042+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:54.041+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2023-12-20T05:59:54.064+0000] {logging_mixin.py:150} INFO - [2023-12-20T05:59:54.063+0000] {dag.py:3508} INFO - Setting next_dagrun for retrain_dag to 2023-12-20T05:56:00+00:00, run_after=2023-12-20T05:58:00+00:00
+[2023-12-20T05:59:54.081+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.903 seconds

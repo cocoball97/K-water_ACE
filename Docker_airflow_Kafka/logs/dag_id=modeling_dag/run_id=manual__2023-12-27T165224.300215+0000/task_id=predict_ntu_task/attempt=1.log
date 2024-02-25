@@ -1,0 +1,34 @@
+[2023-12-27T16:52:26.540+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: modeling_dag.predict_ntu_task manual__2023-12-27T16:52:24.300215+00:00 [queued]>
+[2023-12-27T16:52:26.549+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: modeling_dag.predict_ntu_task manual__2023-12-27T16:52:24.300215+00:00 [queued]>
+[2023-12-27T16:52:26.549+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-27T16:52:26.562+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): predict_ntu_task> on 2023-12-27 16:52:24.300215+00:00
+[2023-12-27T16:52:26.568+0000] {standard_task_runner.py:57} INFO - Started process 4277 to run task
+[2023-12-27T16:52:26.571+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'modeling_dag', 'predict_ntu_task', 'manual__2023-12-27T16:52:24.300215+00:00', '--job-id', '451', '--raw', '--subdir', 'DAGS_FOLDER/modeling.py', '--cfg-path', '/tmp/tmpnln4rco2']
+[2023-12-27T16:52:26.573+0000] {standard_task_runner.py:85} INFO - Job 451: Subtask predict_ntu_task
+[2023-12-27T16:52:26.613+0000] {task_command.py:410} INFO - Running <TaskInstance: modeling_dag.predict_ntu_task manual__2023-12-27T16:52:24.300215+00:00 [running]> on host c56b1de7f6cf
+[2023-12-27T16:52:26.675+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='modeling_dag' AIRFLOW_CTX_TASK_ID='predict_ntu_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-27T16:52:24.300215+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-27T16:52:24.300215+00:00'
+[2023-12-27T16:52:27.039+0000] {warnings.py:110} WARNING - /opt/***/dags/modeling.py:40: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  lstm_df[col] = low_val
+
+[2023-12-27T16:52:27.042+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/preprocessing/_data.py:461: RuntimeWarning: All-NaN slice encountered
+  data_min = np.nanmin(X, axis=0)
+
+[2023-12-27T16:52:27.043+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/preprocessing/_data.py:462: RuntimeWarning: All-NaN slice encountered
+  data_max = np.nanmax(X, axis=0)
+
+[2023-12-27T16:52:27.663+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/base.py:451: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  "X does not have valid feature names, but"
+
+[2023-12-27T16:52:28.319+0000] {logging_mixin.py:150} INFO - 1/1 [==============================] - ETA: 0s
+[2023-12-27T16:52:28.320+0000] {logging_mixin.py:150} INFO - 1/1 [==============================] - 1s 614ms/step
+[2023-12-27T16:52:28.321+0000] {logging_mixin.py:150} INFO - new data : [[19.426077], [19.830744], [19.85284]]
+[2023-12-27T16:52:28.321+0000] {logging_mixin.py:150} INFO - t+1 ntu : [nan]
+[2023-12-27T16:52:28.322+0000] {logging_mixin.py:150} INFO - <class 'numpy.ndarray'>
+[2023-12-27T16:52:28.324+0000] {python.py:183} INFO - Done. Returned value was: [nan]
+[2023-12-27T16:52:28.340+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=modeling_dag, task_id=predict_ntu_task, execution_date=20231227T165224, start_date=20231227T165226, end_date=20231227T165228
+[2023-12-27T16:52:28.389+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-12-27T16:52:28.408+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

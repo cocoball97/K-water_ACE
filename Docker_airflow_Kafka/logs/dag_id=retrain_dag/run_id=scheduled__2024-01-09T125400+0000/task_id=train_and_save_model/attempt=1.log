@@ -1,0 +1,13 @@
+[2024-01-09T13:06:06.585+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retrain_dag.train_and_save_model scheduled__2024-01-09T12:54:00+00:00 [queued]>
+[2024-01-09T13:06:06.604+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retrain_dag.train_and_save_model scheduled__2024-01-09T12:54:00+00:00 [queued]>
+[2024-01-09T13:06:06.605+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2024-01-09T13:06:06.627+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): train_and_save_model> on 2024-01-09 12:54:00+00:00
+[2024-01-09T13:06:06.639+0000] {standard_task_runner.py:57} INFO - Started process 107 to run task
+[2024-01-09T13:06:06.644+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'retrain_dag', 'train_and_save_model', 'scheduled__2024-01-09T12:54:00+00:00', '--job-id', '520', '--raw', '--subdir', 'DAGS_FOLDER/retrain_dag.py', '--cfg-path', '/tmp/tmpffr0800j']
+[2024-01-09T13:06:06.647+0000] {standard_task_runner.py:85} INFO - Job 520: Subtask train_and_save_model
+[2024-01-09T13:06:06.723+0000] {task_command.py:410} INFO - Running <TaskInstance: retrain_dag.train_and_save_model scheduled__2024-01-09T12:54:00+00:00 [running]> on host 93456042b127
+[2024-01-09T13:06:06.870+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retrain_dag' AIRFLOW_CTX_TASK_ID='train_and_save_model' AIRFLOW_CTX_EXECUTION_DATE='2024-01-09T12:54:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-09T12:54:00+00:00'
+[2024-01-09T13:06:25.867+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-01-09T13:06:25.875+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=retrain_dag, task_id=train_and_save_model, execution_date=20240109T125400, start_date=20240109T130606, end_date=20240109T130625
+[2024-01-09T13:06:25.899+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-01-09T13:06:25.910+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

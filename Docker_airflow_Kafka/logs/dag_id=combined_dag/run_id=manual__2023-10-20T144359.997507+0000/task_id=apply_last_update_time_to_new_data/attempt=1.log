@@ -1,0 +1,13 @@
+[2023-10-20T14:44:12.803+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: combined_dag.apply_last_update_time_to_new_data manual__2023-10-20T14:43:59.997507+00:00 [queued]>
+[2023-10-20T14:44:12.810+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: combined_dag.apply_last_update_time_to_new_data manual__2023-10-20T14:43:59.997507+00:00 [queued]>
+[2023-10-20T14:44:12.810+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-10-20T14:44:12.820+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): apply_last_update_time_to_new_data> on 2023-10-20 14:43:59.997507+00:00
+[2023-10-20T14:44:12.828+0000] {standard_task_runner.py:57} INFO - Started process 1910 to run task
+[2023-10-20T14:44:12.830+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'combined_dag', 'apply_last_update_time_to_new_data', 'manual__2023-10-20T14:43:59.997507+00:00', '--job-id', '133', '--raw', '--subdir', 'DAGS_FOLDER/combined_dag(real).py', '--cfg-path', '/tmp/tmpweemszo9']
+[2023-10-20T14:44:12.831+0000] {standard_task_runner.py:85} INFO - Job 133: Subtask apply_last_update_time_to_new_data
+[2023-10-20T14:44:12.861+0000] {task_command.py:410} INFO - Running <TaskInstance: combined_dag.apply_last_update_time_to_new_data manual__2023-10-20T14:43:59.997507+00:00 [running]> on host bea49855d648
+[2023-10-20T14:44:12.919+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='combined_dag' AIRFLOW_CTX_TASK_ID='apply_last_update_time_to_new_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-20T14:43:59.997507+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-20T14:43:59.997507+00:00'
+[2023-10-20T14:44:12.958+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-10-20T14:44:12.965+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=combined_dag, task_id=apply_last_update_time_to_new_data, execution_date=20231020T144359, start_date=20231020T144412, end_date=20231020T144412
+[2023-10-20T14:44:13.002+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-10-20T14:44:13.014+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,28 @@
+[2024-02-04T16:37:06.144+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: modeling_dag.predict_ntu_task scheduled__2024-02-04T16:36:00+00:00 [queued]>
+[2024-02-04T16:37:06.150+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: modeling_dag.predict_ntu_task scheduled__2024-02-04T16:36:00+00:00 [queued]>
+[2024-02-04T16:37:06.151+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2024-02-04T16:37:06.163+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): predict_ntu_task> on 2024-02-04 16:36:00+00:00
+[2024-02-04T16:37:06.168+0000] {standard_task_runner.py:57} INFO - Started process 1660 to run task
+[2024-02-04T16:37:06.171+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'modeling_dag', 'predict_ntu_task', 'scheduled__2024-02-04T16:36:00+00:00', '--job-id', '1473', '--raw', '--subdir', 'DAGS_FOLDER/modeling.py', '--cfg-path', '/tmp/tmplcvvodq0']
+[2024-02-04T16:37:06.174+0000] {standard_task_runner.py:85} INFO - Job 1473: Subtask predict_ntu_task
+[2024-02-04T16:37:06.206+0000] {task_command.py:410} INFO - Running <TaskInstance: modeling_dag.predict_ntu_task scheduled__2024-02-04T16:36:00+00:00 [running]> on host 93456042b127
+[2024-02-04T16:37:06.266+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='modeling_dag' AIRFLOW_CTX_TASK_ID='predict_ntu_task' AIRFLOW_CTX_EXECUTION_DATE='2024-02-04T16:36:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-04T16:36:00+00:00'
+[2024-02-04T16:37:06.587+0000] {warnings.py:110} WARNING - /opt/***/dags/modeling.py:73: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  lstm_df[col] = low_val
+
+[2024-02-04T16:37:07.161+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/base.py:451: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  "X does not have valid feature names, but"
+
+[2024-02-04T16:37:07.768+0000] {logging_mixin.py:150} INFO - 1/1 [==============================] - ETA: 0s
+[2024-02-04T16:37:07.769+0000] {logging_mixin.py:150} INFO - 1/1 [==============================] - 1s 574ms/step
+[2024-02-04T16:37:07.770+0000] {logging_mixin.py:150} INFO - new data : [[35.414181], [33.308991999999996], [33.63801]]
+[2024-02-04T16:37:07.771+0000] {logging_mixin.py:150} INFO - t+1 ntu : [31.699457]
+[2024-02-04T16:37:07.771+0000] {logging_mixin.py:150} INFO - <class 'numpy.ndarray'>
+[2024-02-04T16:37:07.774+0000] {python.py:183} INFO - Done. Returned value was: [31.699457]
+[2024-02-04T16:37:07.791+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=modeling_dag, task_id=predict_ntu_task, execution_date=20240204T163600, start_date=20240204T163706, end_date=20240204T163707
+[2024-02-04T16:37:07.828+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-02-04T16:37:07.843+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

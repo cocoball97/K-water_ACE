@@ -1,0 +1,14 @@
+[2023-12-25T11:24:38.694+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: producer_dag.check_kafka_topic_task manual__2023-12-25T11:24:35.979655+00:00 [queued]>
+[2023-12-25T11:24:38.700+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: producer_dag.check_kafka_topic_task manual__2023-12-25T11:24:35.979655+00:00 [queued]>
+[2023-12-25T11:24:38.700+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-12-25T11:24:38.713+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): check_kafka_topic_task> on 2023-12-25 11:24:35.979655+00:00
+[2023-12-25T11:24:38.718+0000] {standard_task_runner.py:57} INFO - Started process 1080 to run task
+[2023-12-25T11:24:38.720+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'producer_dag', 'check_kafka_topic_task', 'manual__2023-12-25T11:24:35.979655+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/producer.py', '--cfg-path', '/tmp/tmpz8om1nf4']
+[2023-12-25T11:24:38.723+0000] {standard_task_runner.py:85} INFO - Job 24: Subtask check_kafka_topic_task
+[2023-12-25T11:24:38.750+0000] {task_command.py:410} INFO - Running <TaskInstance: producer_dag.check_kafka_topic_task manual__2023-12-25T11:24:35.979655+00:00 [running]> on host c56b1de7f6cf
+[2023-12-25T11:24:38.803+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='producer_dag' AIRFLOW_CTX_TASK_ID='check_kafka_topic_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-25T11:24:35.979655+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-25T11:24:35.979655+00:00'
+[2023-12-25T11:24:38.808+0000] {logging_mixin.py:150} INFO - 토픽 'water' 존재 여부: True
+[2023-12-25T11:24:38.809+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-12-25T11:24:38.815+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=producer_dag, task_id=check_kafka_topic_task, execution_date=20231225T112435, start_date=20231225T112438, end_date=20231225T112438
+[2023-12-25T11:24:38.852+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-12-25T11:24:38.867+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

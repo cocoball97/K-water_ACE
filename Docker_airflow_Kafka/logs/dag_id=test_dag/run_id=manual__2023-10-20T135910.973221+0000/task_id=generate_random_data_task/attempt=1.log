@@ -1,0 +1,44 @@
+[2023-10-20T13:59:13.574+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_dag.generate_random_data_task manual__2023-10-20T13:59:10.973221+00:00 [queued]>
+[2023-10-20T13:59:13.579+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_dag.generate_random_data_task manual__2023-10-20T13:59:10.973221+00:00 [queued]>
+[2023-10-20T13:59:13.580+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-10-20T13:59:13.588+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): generate_random_data_task> on 2023-10-20 13:59:10.973221+00:00
+[2023-10-20T13:59:13.594+0000] {standard_task_runner.py:57} INFO - Started process 1427 to run task
+[2023-10-20T13:59:13.597+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'test_dag', 'generate_random_data_task', 'manual__2023-10-20T13:59:10.973221+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpc0vuwrjt']
+[2023-10-20T13:59:13.597+0000] {standard_task_runner.py:85} INFO - Job 104: Subtask generate_random_data_task
+[2023-10-20T13:59:13.627+0000] {task_command.py:410} INFO - Running <TaskInstance: test_dag.generate_random_data_task manual__2023-10-20T13:59:10.973221+00:00 [running]> on host 9e1824266991
+[2023-10-20T13:59:13.674+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='test_dag' AIRFLOW_CTX_TASK_ID='generate_random_data_task' AIRFLOW_CTX_EXECUTION_DATE='2023-10-20T13:59:10.973221+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-20T13:59:10.973221+00:00'
+[2023-10-20T13:59:13.683+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 2056, in execute
+    cur.execute(*args, **kwargs)
+psycopg2.errors.UndefinedTable: relation "kwater" does not exist
+LINE 1: SELECT * FROM kwater LIMIT 10
+                      ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/test.py", line 28, in generate_random_data
+    df = pd.read_sql(query, conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 608, in read_sql
+    chunksize=chunksize,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 2116, in read_query
+    cursor = self.execute(*args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 2068, in execute
+    raise ex from exc
+pandas.io.sql.DatabaseError: Execution failed on sql 'SELECT * FROM kwater LIMIT 10': relation "kwater" does not exist
+LINE 1: SELECT * FROM kwater LIMIT 10
+                      ^
+
+[2023-10-20T13:59:13.689+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=test_dag, task_id=generate_random_data_task, execution_date=20231020T135910, start_date=20231020T135913, end_date=20231020T135913
+[2023-10-20T13:59:13.697+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 104 for task generate_random_data_task (Execution failed on sql 'SELECT * FROM kwater LIMIT 10': relation "kwater" does not exist
+LINE 1: SELECT * FROM kwater LIMIT 10
+                      ^
+; 1427)
+[2023-10-20T13:59:13.728+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-10-20T13:59:13.739+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
