@@ -15,28 +15,28 @@
 ## Description
 - 수질 특성을 고려하여 응집제 자동화 예측 모델링 및 업데이트
 <p align="center">
-  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/55ff22e9-66e4-4bf3-8ceb-7b720682585f" width="300" height="300" />
+  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/55ff22e9-66e4-4bf3-8ceb-7b720682585f" width="250" height="250" />
 </p>
 <p align="center">
-    <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/982f863f-e684-4198-b0a7-43debd77d843" width="700" height="200" />
+    <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/982f863f-e684-4198-b0a7-43debd77d843" width="650" height="150" />
 </p>
 
 - 미래 탁도를 예측 및 알람 기능
 <p align="center">
-  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/55ff22e9-66e4-4bf3-8ceb-7b720682585f" width="350" height="300" />
-  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/0af18669-b222-4d15-bfae-2d266ce2ea09" width="350" height="300" />
+  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/55ff22e9-66e4-4bf3-8ceb-7b720682585f" width="250" height="250" />
+  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/0af18669-b222-4d15-bfae-2d266ce2ea09" width="250" height="250" />
 </p>
 
 - 데이터 모니터링, 대시보드를 통한 데이터 흐름 제어
 <p align="center">
-  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/9da885eb-7858-4844-8f72-457ac597edeb" width="300" height="300" />
-  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/e020a7ab-acfb-4864-96f9-52a400c3b0f0" width="300" height="300" />
+  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/9da885eb-7858-4844-8f72-457ac597edeb" width="250" height="250" />
+  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/e020a7ab-acfb-4864-96f9-52a400c3b0f0" width="400" height="250" />
 </p>
 
 - 실시간 수질 정보 확인
 <p align="center">
   <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/8c00bc22-5020-47e0-8855-16bc25377a35" width="300" height="300" />
-  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/6acf900c-d5e6-4367-8d33-b2c7edc27166" width="300" height="300" />
+  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/9d758179-5f6e-48dd-b7b7-0b95ea0d5b83" width="300" height="300" />
 </p>
 
 ## Getting Started
@@ -46,9 +46,11 @@
 *  Windows 10
 
 ### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+    pip install -r requirements.txt
+    
+* Docker
+* Kafka
+* Airflow
 
 ### Executing program
 
