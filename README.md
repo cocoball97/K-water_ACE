@@ -1,4 +1,75 @@
-##한국수자원공사
-#한국
+# 최적의 수처리 약품 예측 수자원공사 협업 프로젝트
+최적의 응집제 주입률, 미래탁도 예측을 통해 수질의 안정성을 확보, 신속한 대응체계 구축하고 약품 사용량 절감을 통한 환경 개선을 목적으로 한다.
+
 
 <img width="80%" src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/6470bf9c-6e5f-4030-aac5-89ac0dab122e"/>
+<p align="center">
+  <a href="https://courageous-divan-62d.notion.site/eb81e463e6e54fa8b0d4532ece23b682?pvs=4">
+    <img width="90%" src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/6470bf9c-6e5f-4030-aac5-89ac0dab122e" alt="수자원공사 협업 프로젝트"/>
+  </a>
+  <br> <!-- 줄바꿈 -->
+  <a href="https://courageous-divan-62d.notion.site/eb81e463e6e54fa8b0d4532ece23b682?pvs=4">시연영상으로 확인하세요</a>
+</p>
+
+
+## Description
+
+- 수질 특성을 고려하여 응집제 자동화 예측 모델링 및 업데이트
+- 미래 탁도를 예측 및 알람 기능
+- 데이터 모니터링, 대시보드를 통한 데이터 흐름 제어
+- 실시간 수질 정보 확인
+
+## Getting Started
+
+### Dependencies
+
+* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+* ex. Windows 10
+
+### Installing
+
+* How/where to download your program
+* Any modifications needed to be made to files/folders
+
+### Executing program
+
+* How to run the program
+* Step-by-step bullets
+```
+code blocks for commands
+```
+
+## Help
+
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
+
+## Authors
+
+Contributors names and contact info
+
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
+
+## Version History
+
+* 0.2
+    * Various bug fixes and optimizations
+    * See [commit change]() or See [release history]()
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* [dbader](https://github.com/dbader/readme-template)
+* [zenorocha](https://gist.github.com/zenorocha/4526327)
+* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
