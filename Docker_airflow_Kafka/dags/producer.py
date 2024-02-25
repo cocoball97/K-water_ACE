@@ -2,16 +2,9 @@ import pandas as pd
 import psycopg2
 from datetime import datetime
 from airflow import DAG
-from airflow.models.variable import Variable
 from airflow.operators.python import PythonOperator
-from airflow.operators.python import BranchPythonOperator
-from joblib import load
-import numpy as np
-import logging
 import random
-from sklearn.preprocessing import MinMaxScaler
 from confluent_kafka import Producer
-from confluent_kafka.admin import AdminClient
 
 # kafka 설정
 kafka_conf = {

@@ -9,7 +9,6 @@ from confluent_kafka import Consumer, KafkaException, KafkaError
 from pytz import timezone 
 from airflow import DAG
 import json
-import time
 import numpy as np
 import random
 

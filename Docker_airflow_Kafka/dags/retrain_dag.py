@@ -3,12 +3,8 @@ import psycopg2
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.models.variable import Variable
-from joblib import load, dump
-from sklearn.ensemble import ExtraTreesRegressor, RandomForestRegressor
-from lightgbm import LGBMRegressor
-from xgboost import XGBRegressor
-from sklearn.base import clone
+from joblib import dump
+from sklearn.ensemble import ExtraTreesRegressor
 from pytz import timezone 
 
 
@@ -27,14 +23,9 @@ def train_and_save_model():
     
     query = "SELECT * FROM kwater"
     df = pd.read_sql(query, conn)
-    
-    clusters = df['cluster'].unique()
-    
-    model1=ExtraTreesRegressor(max_depth=15, n_estimators=200, random_state=6666)
-    # 'RandomForest': RandomForestRegressor(max_depth=15, n_estimators=200, random_state=6666),
-    # 'LGBM': LGBMRegressor(max_depth=15, n_estimators=200, random_state=6666),
-    # 'XGBoost': XGBRegressor(max_depth=15, n_estimators=200, random_state=6666)
 
+    clusters = df['cluster'].unique()
+    model1=ExtraTreesRegressor(max_depth=15, n_estimators=200, random_state=6666)
     model_list=[model1]
     features = ['탁도', 'pH', '수온', '전기전도도', '알칼리도']
     target = 'PACS투입률'
