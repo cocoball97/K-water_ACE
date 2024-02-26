@@ -35,6 +35,12 @@
   <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/9d758179-5f6e-48dd-b7b7-0b95ea0d5b83" width="330" height="300" />
 </p>
 
+## Infrastructures
+<p align="center">
+  <img src="https://github.com/cocoball97/K-water_ACE/assets/125456345/6357875d-0d42-4381-ab11-a159ff52847a" width="90%" />
+</p>
+
+
 ## Getting Started
 
 ### Dependencies
