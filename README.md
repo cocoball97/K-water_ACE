@@ -4,11 +4,11 @@
 
 
 <p align="center">
-  <a href="https://www.notion.so/9dac4b24ed444f6ab9718578e975ead0">
+  <a href="https://courageous-divan-62d.notion.site/9dac4b24ed444f6ab9718578e975ead0">
     <img width="90%" src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/6470bf9c-6e5f-4030-aac5-89ac0dab122e" alt="수자원공사 협업 프로젝트"/>
   </a>
   <br> <!-- 줄바꿈 -->
-  <a href="https://courageous-divan-62d.notion.site/eb81e463e6e54fa8b0d4532ece23b682?pvs=4">시연영상으로 확인하세요</a>
+  <a href="https://courageous-divan-62d.notion.site/9dac4b24ed444f6ab9718578e975ead0">시연영상으로 확인하세요</a>
 </p>
 
 
