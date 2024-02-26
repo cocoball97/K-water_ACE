@@ -49,7 +49,7 @@
 * Kafka
 * Airflow
 * PostgreSQL
-* 
+  
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/cocoball97/K-water_ACE/edit/main/README.md) file for details
