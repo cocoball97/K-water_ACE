@@ -14,17 +14,10 @@
 
 
 ## Description
-- 수질 특성을 고려하여 응집제 자동화 예측 모델링 및 업데이트
-<p align="center">
-  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/55ff22e9-66e4-4bf3-8ceb-7b720682585f" width="250" height="220" />
-</p>
-<p align="center">
-    <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/982f863f-e684-4198-b0a7-43debd77d843" width="650" height="150" />
-</p>
+
 
 <p align="center">
   <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/55ff22e9-66e4-4bf3-8ceb-7b720682585f" width="250" height="220" />
-  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/982f863f-e684-4198-b0a7-43debd77d843" width="650" height="150" />
 </p>
 
 
