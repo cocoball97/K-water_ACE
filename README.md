@@ -12,6 +12,7 @@
 </p>
 
 
+
 ## Description
 - 수질 특성을 고려하여 응집제 자동화 예측 모델링 및 업데이트
 <p align="center">
@@ -20,6 +21,12 @@
 <p align="center">
     <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/982f863f-e684-4198-b0a7-43debd77d843" width="650" height="150" />
 </p>
+
+<p align="center">
+  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/55ff22e9-66e4-4bf3-8ceb-7b720682585f" width="250" height="220" />
+  <img src="https://github.com/cocoball97/Korea-Water-Resources-ACE/assets/125456345/982f863f-e684-4198-b0a7-43debd77d843" width="650" height="150" />
+</p>
+
 
 - 미래 탁도를 예측 및 알람 기능
 <p align="center">
@@ -44,6 +51,7 @@
 ### Dependencies
 
 *  Windows 10
+*  WSL-2
 
 ### Installing
     pip install -r requirements.txt
@@ -51,46 +59,10 @@
 * Docker
 * Kafka
 * Airflow
+* PostgreSQL
 
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
-## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
 
 ## License
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
