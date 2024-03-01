@@ -1,0 +1,46 @@
+2024-02-27 02:21:57.850 [info] (Client) Pylance async client (2024.2.2) started with python extension (2024.0.1)
+2024-02-27 02:21:58.303 [info] [Info  - 2:21:58 AM] (2033) Pylance language server 2024.2.2 (pyright version 1.1.348, commit cfb1de0c) starting
+2024-02-27 02:21:58.303 [info] [Info  - 2:21:58 AM] (2033) Server root directory: file:///home/jovyan/.vscode-server/extensions/ms-python.vscode-pylance-2024.2.2/dist
+2024-02-27 02:21:58.303 [info] [Info  - 2:21:58 AM] (2033) Starting service instance "jovyan"
+2024-02-27 02:21:58.370 [info] [Info  - 2:21:58 AM] (2033) Setting environmentName for service "jovyan": "C:\Users\Administrator\anaconda3\envs\kwater\python.exe"
+2024-02-27 02:21:58.425 [info] [Info  - 2:21:58 AM] (2033) No source files found.
+2024-02-27 02:21:58.437 [info] [Info  - 2:21:58 AM] (2033) Starting service instance "jovyan"
+2024-02-27 02:21:58.481 [info] [Info  - 2:21:58 AM] (2033) Setting pythonPath for service "jovyan": "/home/jovyan"
+2024-02-27 02:21:58.481 [info] [Info  - 2:21:58 AM] (2033) Setting environmentName for service "jovyan": "C:\Users\Administrator\anaconda3\envs\kwater\python.exe"
+2024-02-27 02:21:58.502 [info] [Info  - 2:21:58 AM] (2033) No source files found.
+2024-02-27 02:21:58.875 [info] [Info  - 2:21:58 AM] (2033) Background analysis(1) root directory: file:///home/jovyan/.vscode-server/extensions/ms-python.vscode-pylance-2024.2.2/dist
+2024-02-27 02:21:58.877 [info] [Info  - 2:21:58 AM] (2033) Background analysis(1) started
+2024-02-27 02:21:58.989 [info] [Info  - 2:21:58 AM] (2033) Background analysis(2) root directory: file:///home/jovyan/.vscode-server/extensions/ms-python.vscode-pylance-2024.2.2/dist
+2024-02-27 02:21:58.991 [info] [Info  - 2:21:58 AM] (2033) Background analysis(2) started
+2024-02-27 02:21:59.048 [info] [Info  - 2:21:59 AM] (2033) Indexer background runner(3) root directory: file:///home/jovyan/.vscode-server/extensions/ms-python.vscode-pylance-2024.2.2/dist (index)
+2024-02-27 02:21:59.049 [info] [Info  - 2:21:59 AM] (2033) Indexing(3) started
+2024-02-27 02:21:59.268 [info] [Info  - 2:21:59 AM] (2033) Setting environmentName for service "jovyan": "C:\Users\Administrator\anaconda3\envs\kwater\python.exe"
+2024-02-27 02:21:59.337 [info] [Info  - 2:21:59 AM] (2033) No source files found.
+2024-02-27 02:21:59.366 [info] [Info  - 2:21:59 AM] (2033) Setting pythonPath for service "jovyan": "/home/jovyan"
+2024-02-27 02:21:59.367 [info] [Info  - 2:21:59 AM] (2033) Setting environmentName for service "jovyan": "C:\Users\Administrator\anaconda3\envs\kwater\python.exe"
+2024-02-27 02:21:59.467 [info] [Info  - 2:21:59 AM] (2033) Found 2 source files
+2024-02-27 02:21:59.805 [info] [Info  - 2:21:59 AM] (2033) scanned(3) 1 files over 1 exec env
+2024-02-27 02:22:00.462 [info] [Info  - 2:22:00 AM] (2033) indexed(3) 1 files over 1 exec env
+2024-02-27 02:22:00.482 [info] [Info  - 2:22:00 AM] (2033) Indexing finished(3).
+2024-02-27 02:22:03.777 [info] [Info  - 2:22:03 AM] (2033) Setting environmentName for service "jovyan": "C:\Users\Administrator\anaconda3\envs\kwater\python.exe"
+2024-02-27 02:22:03.833 [info] [Info  - 2:22:03 AM] (2033) No source files found.
+2024-02-27 02:22:03.858 [info] [Info  - 2:22:03 AM] (2033) Setting pythonPath for service "jovyan": "/home/jovyan"
+2024-02-27 02:22:03.858 [info] [Info  - 2:22:03 AM] (2033) Setting environmentName for service "jovyan": "C:\Users\Administrator\anaconda3\envs\kwater\python.exe"
+2024-02-27 02:22:03.890 [info] [Info  - 2:22:03 AM] (2033) Found 2 source files
+2024-02-27 02:22:04.417 [info] [Info  - 2:22:04 AM] (2033) Indexer background runner(4) root directory: file:///home/jovyan/.vscode-server/extensions/ms-python.vscode-pylance-2024.2.2/dist (index)
+2024-02-27 02:22:04.417 [info] [Info  - 2:22:04 AM] (2033) Indexing(4) started
+2024-02-27 02:22:04.643 [info] [Info  - 2:22:04 AM] (2033) scanned(4) 1 files over 1 exec env
+2024-02-27 02:22:04.949 [info] [Info  - 2:22:04 AM] (2033) indexed(4) 1 files over 1 exec env
+2024-02-27 02:22:04.969 [info] [Info  - 2:22:04 AM] (2033) Indexing finished(4).
+2024-02-27 02:22:11.977 [info] [Info  - 2:22:11 AM] (2033) Setting pythonPath for service "jovyan": "/opt/conda/bin/python"
+2024-02-27 02:22:11.977 [info] [Info  - 2:22:11 AM] (2033) Setting environmentName for service "jovyan": "3.11.6 (base conda)"
+2024-02-27 02:22:12.010 [info] [Info  - 2:22:12 AM] (2033) Assuming Python version 3.11
+2024-02-27 02:22:12.050 [info] [Info  - 2:22:12 AM] (2033) No source files found.
+2024-02-27 02:22:12.071 [info] [Info  - 2:22:12 AM] (2033) Setting pythonPath for service "jovyan": "/home/jovyan"
+2024-02-27 02:22:12.071 [info] [Info  - 2:22:12 AM] (2033) Setting environmentName for service "jovyan": "3.11.6 (base conda)"
+2024-02-27 02:22:12.095 [info] [Info  - 2:22:12 AM] (2033) Found 2 source files
+2024-02-27 02:22:12.643 [info] [Info  - 2:22:12 AM] (2033) Indexer background runner(5) root directory: file:///home/jovyan/.vscode-server/extensions/ms-python.vscode-pylance-2024.2.2/dist (index)
+2024-02-27 02:22:12.643 [info] [Info  - 2:22:12 AM] (2033) Indexing(5) started
+2024-02-27 02:22:12.893 [info] [Info  - 2:22:12 AM] (2033) scanned(5) 1 files over 1 exec env
+2024-02-27 02:22:13.175 [info] [Info  - 2:22:13 AM] (2033) indexed(5) 1 files over 1 exec env
+2024-02-27 02:22:13.198 [info] [Info  - 2:22:13 AM] (2033) Indexing finished(5).

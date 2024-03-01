@@ -1,0 +1,52 @@
+2024-02-27 02:21:13.133 [info] 
+
+
+
+
+2024-02-27 02:21:13.133 [info] Extension host agent started.
+2024-02-27 02:21:13.133 [debug] No uninstalled extensions found.
+2024-02-27 02:21:13.133 [info] Started initializing default profile extensions in extensions installation folder. file:///home/jovyan/.vscode-server/extensions
+2024-02-27 02:21:13.140 [debug] ComputeTargetPlatform: linux-x64
+2024-02-27 02:21:13.147 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/jovyan/.vscode-server/extensions
+2024-02-27 02:21:13.369 [info] [127.0.0.1][9be8d069][ManagementConnection] New connection established.
+2024-02-27 02:21:13.385 [info] Log level changed to info
+2024-02-27 02:21:13.675 [info] [127.0.0.1][d1b68dce][ExtensionHostConnection] New connection established.
+2024-02-27 02:21:13.682 [info] [127.0.0.1][d1b68dce][ExtensionHostConnection] <773> Launched Extension Host Process.
+2024-02-27 02:21:24.295 [info] [127.0.0.1][9be8d069][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-02-27 02:21:24.356 [info] [127.0.0.1][d1b68dce][ExtensionHostConnection] <773> Extension Host Process exited with code: 0, signal: null.
+2024-02-27 02:21:30.533 [info] [127.0.0.1][b61918e6][ManagementConnection] New connection established.
+2024-02-27 02:21:31.125 [info] [127.0.0.1][5a9d34f0][ExtensionHostConnection] New connection established.
+2024-02-27 02:21:31.143 [info] [127.0.0.1][5a9d34f0][ExtensionHostConnection] <1271> Launched Extension Host Process.
+2024-02-27 02:21:41.539 [info] Getting Manifest... ms-python.python
+2024-02-27 02:21:41.735 [info] Installing extension: ms-python.python
+2024-02-27 02:21:42.363 [info] Getting Manifest... ms-python.vscode-pylance
+2024-02-27 02:21:42.569 [info] Getting Manifest... ms-python.debugpy
+2024-02-27 02:21:42.771 [info] Installing extension: ms-python.vscode-pylance ms-python.python
+2024-02-27 02:21:42.771 [info] Installing extension: ms-python.debugpy ms-python.python
+2024-02-27 02:21:44.656 [warning] Extension signature verification failed with error 'ENOENT': ms-python.debugpy
+2024-02-27 02:21:44.692 [warning] Extension signature verification failed with error 'ENOENT': ms-python.python
+2024-02-27 02:21:46.206 [info] Extracted extension to file:///home/jovyan/.vscode-server/extensions/ms-python.debugpy-2024.0.0-linux-x64: ms-python.debugpy
+2024-02-27 02:21:46.215 [info] Renamed to /home/jovyan/.vscode-server/extensions/ms-python.debugpy-2024.0.0-linux-x64
+2024-02-27 02:21:46.220 [info] Extracting extension completed. ms-python.debugpy
+2024-02-27 02:21:48.352 [info] Extracted extension to file:///home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1: ms-python.python
+2024-02-27 02:21:48.368 [info] Renamed to /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1
+2024-02-27 02:21:48.374 [info] Extracting extension completed. ms-python.python
+2024-02-27 02:21:50.575 [warning] Extension signature verification failed with error 'ENOENT': ms-python.vscode-pylance
+2024-02-27 02:21:56.026 [info] Extracted extension to file:///home/jovyan/.vscode-server/extensions/ms-python.vscode-pylance-2024.2.2: ms-python.vscode-pylance
+2024-02-27 02:21:56.046 [info] Renamed to /home/jovyan/.vscode-server/extensions/ms-python.vscode-pylance-2024.2.2
+2024-02-27 02:21:56.052 [info] Extracting extension completed. ms-python.vscode-pylance
+2024-02-27 02:21:56.059 [info] Extension installed successfully: ms-python.debugpy
+2024-02-27 02:21:56.059 [info] Extension installed successfully: ms-python.python
+2024-02-27 02:21:56.059 [info] Extension installed successfully: ms-python.vscode-pylance
+2024-02-27 02:22:18.057 [info] Getting Manifest... ms-python.python
+2024-02-27 02:22:18.249 [info] Installing extension: ms-python.python
+2024-02-27 02:22:18.454 [info] Extension installed successfully: ms-python.python
+2024-02-27 02:22:22.925 [info] Getting Manifest... ms-python.python
+2024-02-27 02:22:23.106 [info] Installing extension: ms-python.python
+2024-02-27 02:22:23.290 [info] Extension installed successfully: ms-python.python
+2024-02-27 02:22:28.611 [info] Getting Manifest... ms-python.python
+2024-02-27 02:22:28.791 [info] Installing extension: ms-python.python
+2024-02-27 02:22:28.976 [info] Extension installed successfully: ms-python.python
+2024-02-27 02:22:51.961 [info] [127.0.0.1][b61918e6][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-02-27 02:22:52.174 [info] [127.0.0.1][5a9d34f0][ExtensionHostConnection] <1271> Extension Host Process exited with code: 0, signal: null.
+2024-02-27 03:53:21.994 [warning] No ptyHost heartbeat after 6 seconds

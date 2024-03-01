@@ -1,0 +1,79 @@
+2024-02-27 02:21:57.136 [info] Experiment 'pythonaacf' is active
+2024-02-27 02:21:57.136 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-02-27 02:21:57.136 [info] Experiment 'pythonREPLSmartSend' is active
+2024-02-27 02:21:57.136 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-02-27 02:21:57.136 [info] Experiment 'pythonTestAdapter' is active
+2024-02-27 02:21:57.136 [info] Default formatter is set to null for workspace /home/jovyan
+2024-02-27 02:21:57.136 [info] Test server listening.
+2024-02-27 02:21:57.145 [info] > C:\Users\Administrator\anaconda3\envs\kwater\python.exe -c "import sys;print(sys.executable)"
+2024-02-27 02:21:57.157 [error] [Error: Command failed: C:\Users\Administrator\anaconda3\envs\kwater\python.exe -c "import sys;print(sys.executable)"
+/bin/sh: 1: C:UsersAdministratoranaconda3envskwaterpython.exe: not found
+
+	at ChildProcess.exithandler (node:child_process:420:12)
+	at ChildProcess.emit (node:events:526:35)
+	at maybeClose (node:internal/child_process:1091:16)
+	at Socket.<anonymous> (node:internal/child_process:449:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:323:12)] {
+  code: 127,
+  killed: false,
+  signal: null,
+  cmd: 'C:\\Users\\Administrator\\anaconda3\\envs\\kwater\\python.exe -c "import sys;print(sys.executable)"'
+}
+2024-02-27 02:21:57.188 [info] > C:\Users\Administrator\anaconda3\envs\kwater\python.exe -I ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py
+2024-02-27 02:21:57.197 [error] [Error: Command failed: C:\Users\Administrator\anaconda3\envs\kwater\python.exe -I /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py
+/bin/sh: 1: C:UsersAdministratoranaconda3envskwaterpython.exe: not found
+
+	at ChildProcess.exithandler (node:child_process:420:12)
+	at ChildProcess.emit (node:events:526:35)
+	at maybeClose (node:internal/child_process:1091:16)
+	at Socket.<anonymous> (node:internal/child_process:449:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:323:12)] {
+  code: 127,
+  killed: false,
+  signal: null,
+  cmd: 'C:\\Users\\Administrator\\anaconda3\\envs\\kwater\\python.exe -I /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py'
+}
+2024-02-27 02:21:57.204 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2024-02-27 02:21:57.204 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2024-02-27 02:21:57.204 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2024-02-27 02:21:57.204 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2024-02-27 02:21:57.204 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2024-02-27 02:21:58.317 [info] Starting Pylance language server.
+2024-02-27 02:21:59.205 [info] > C:\Users\Administrator\anaconda3\envs\kwater\python.exe -I ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py
+2024-02-27 02:21:59.209 [error] [Error: Command failed: C:\Users\Administrator\anaconda3\envs\kwater\python.exe -I /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py
+/bin/sh: 1: C:UsersAdministratoranaconda3envskwaterpython.exe: not found
+
+	at ChildProcess.exithandler (node:child_process:420:12)
+	at ChildProcess.emit (node:events:526:35)
+	at maybeClose (node:internal/child_process:1091:16)
+	at Socket.<anonymous> (node:internal/child_process:449:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:323:12)] {
+  code: 127,
+  killed: false,
+  signal: null,
+  cmd: 'C:\\Users\\Administrator\\anaconda3\\envs\\kwater\\python.exe -I /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py'
+}
+2024-02-27 02:22:03.631 [info] > conda info --json
+2024-02-27 02:22:03.654 [info] Found: /bin/python3 --> /bin/python3.10
+2024-02-27 02:22:03.657 [info] Found: /bin/python3.10 --> /bin/python3.10
+2024-02-27 02:22:03.703 [info] Found: /usr/bin/python3 --> /usr/bin/python3.10
+2024-02-27 02:22:03.703 [info] Found: /usr/bin/python3.10 --> /usr/bin/python3.10
+2024-02-27 02:22:03.756 [info] Found: /opt/conda/bin/python --> /opt/conda/bin/python3.11
+2024-02-27 02:22:03.759 [info] Found: /opt/conda/bin/python3 --> /opt/conda/bin/python3.11
+2024-02-27 02:22:03.759 [info] Found: /opt/conda/bin/python3.1 --> /opt/conda/bin/python3.11
+2024-02-27 02:22:03.760 [info] Found: /opt/conda/bin/python3.11 --> /opt/conda/bin/python3.11
+2024-02-27 02:22:03.774 [info] > /bin/python3 -I ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py
+2024-02-27 02:22:03.808 [info] > /usr/bin/python3 -I ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py
+2024-02-27 02:22:04.367 [info] > /opt/conda/bin/python -I ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/interpreterInfo.py
+2024-02-27 02:22:11.947 [info] Discover tests for workspace name: jovyan - uri: /home/jovyan
+2024-02-27 02:22:11.953 [info] > conda info --json
+2024-02-27 02:22:11.953 [info] shell: bash
+2024-02-27 02:22:11.953 [info] Python interpreter path: /opt/conda/bin/python
+2024-02-27 02:22:12.474 [info] > conda run -n base --no-capture-output python ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariables.py
+2024-02-27 02:22:12.474 [info] shell: bash
+2024-02-27 02:22:13.060 [info] > /bin/python3 ./.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariables.py
+2024-02-27 02:22:13.060 [info] shell: bash
+2024-02-27 02:22:13.079 [info] Send text to terminal: /bin/python3 /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/jovyan/.vscode-server/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt

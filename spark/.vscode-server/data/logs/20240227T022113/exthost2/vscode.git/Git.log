@@ -1,0 +1,38 @@
+2024-02-27 02:21:31.997 [info] Log level: Info
+2024-02-27 02:21:31.997 [info] Validating found git in: "git"
+2024-02-27 02:21:31.997 [info] Using git "2.34.1" from "git"
+2024-02-27 02:21:31.997 [info] > git rev-parse --show-toplevel [2ms]
+2024-02-27 02:21:31.997 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:31.997 [info] > git rev-parse --show-toplevel [24ms]
+2024-02-27 02:21:31.997 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:31.997 [info] > git rev-parse --show-toplevel [1ms]
+2024-02-27 02:21:31.997 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:32.000 [info] > git rev-parse --show-toplevel [1ms]
+2024-02-27 02:21:32.000 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:32.003 [info] > git rev-parse --show-toplevel [1ms]
+2024-02-27 02:21:32.003 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:32.007 [info] > git rev-parse --show-toplevel [1ms]
+2024-02-27 02:21:32.007 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:32.011 [info] > git rev-parse --show-toplevel [1ms]
+2024-02-27 02:21:32.011 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:46.107 [info] > git rev-parse --show-toplevel [1ms]
+2024-02-27 02:21:46.107 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:46.114 [info] > git rev-parse --show-toplevel [1ms]
+2024-02-27 02:21:46.114 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:48.442 [warning] Failed to get repository realpath for: "/home/jovyan/.vscode-server/extensions/.2c2f2a4f-64ab-4f42-aa5b-0573eb0269b4/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_frame_eval/". Error: ENOENT: no such file or directory, realpath '/home/jovyan/.vscode-server/extensions/.2c2f2a4f-64ab-4f42-aa5b-0573eb0269b4/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_frame_eval/'
+2024-02-27 02:21:48.962 [warning] Failed to get repository realpath for: "/home/jovyan/.vscode-server/extensions/.2c2f2a4f-64ab-4f42-aa5b-0573eb0269b4/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd_attach_to_process/linux_and_mac/". Error: ENOENT: no such file or directory, realpath '/home/jovyan/.vscode-server/extensions/.2c2f2a4f-64ab-4f42-aa5b-0573eb0269b4/pythonFiles/lib/python/debugpy/_vendored/pydevd/pydevd_attach_to_process/linux_and_mac/'
+2024-02-27 02:21:56.212 [info] > git rev-parse --show-toplevel [1ms]
+2024-02-27 02:21:56.212 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-02-27 02:21:56.267 [info] > git rev-parse --show-toplevel [9ms]
+2024-02-27 02:21:56.267 [info] fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).

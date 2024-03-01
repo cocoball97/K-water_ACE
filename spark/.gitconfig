@@ -1,0 +1,10 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[user]
+	name = Gimun Lee
+	email = wlrn0514@gmail.com
+[credential]
+	helper = "!f() { /home/jovyan/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/node /tmp/vscode-remote-containers-e830274e-21be-474d-ae5d-1d61c2a1f5b2.js git-credential-helper $*; }; f"
